@@ -17,10 +17,6 @@ $break-small: 600px;
 $break-large: 1200px;
 $nav-switch: 875px;
 
-body {
-  font-size: 15px;
-}
-
 @mixin transition($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;

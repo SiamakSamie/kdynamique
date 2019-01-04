@@ -1,8 +1,8 @@
 @import "_config.scss";
 
-//Everything navigation related - mobile, and desktop
+/*Everything navigation related - mobile, and desktop*/
 
-//Styling for desktop navigation
+/* Styling for desktop navigation*/
 .menu {
   padding: 25px 40px;
   color: $menu-text;
@@ -11,6 +11,7 @@
   z-index: 99;
   width: 100%;
   transition: all 0.3s ease;
+
   @media screen and (max-width: $nav-switch) {
     display: none;
   }
@@ -43,9 +44,8 @@
   padding: 12px 40px;
 }
 
-// Styling for mobile navigation
+/* Styling for mobile navigation*/
 
-/* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 40px;
@@ -58,23 +58,19 @@
   }
 }
 
-/* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: $white;
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 24px;
   width: 24px;
 }
 
-/* Color/shape of close button cross */
 .bm-cross {
   background: $white;
 }
 
-/* General sidebar styles */
 .bm-menu {
   background: $menu-background;
   padding-top: 100px;
@@ -142,18 +138,7 @@
   background: $menu-background;
 }
 
-// Menu link styling
-
-//@extend-elements
-//.camera a:before, .camera a:after
-%extend_1 {
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  content: "";
-  transition: all 0.35s ease;
-  opacity: 0;
-}
+/*  link styling  */
 
 .camera {
   text-align: center;
