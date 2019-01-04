@@ -1,0 +1,30 @@
+// colors
+
+$menu-background: #181818;
+$header-text: #333;
+$bm-header-background: #131313;
+
+$menu-text: #6c6c6c;
+$parallax-overlay: #000000ab;
+
+$kdy-red: #e61212;
+$white: #ffffff;
+$white_50: rgba(255, 255, 255, 0.5);
+
+// responsive sizes
+
+$break-small: 600px;
+$break-large: 1200px;
+$nav-switch: 875px;
+
+body {
+  font-size: 15px;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

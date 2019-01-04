@@ -1,0 +1,225 @@
+@import "_config.scss";
+
+//Everything navigation related - mobile, and desktop
+
+//Styling for desktop navigation
+.menu {
+  padding: 25px 40px;
+  color: $menu-text;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  transition: all 0.3s ease;
+  @media screen and (max-width: $nav-switch) {
+    display: none;
+  }
+
+  h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(0%, -50%);
+  }
+
+  img {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(0%, -50%);
+    height: 50px;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    backface-visibility: hidden;
+  }
+  .hideNavLogo {
+    opacity: 0;
+  }
+}
+.menuBackground {
+  background-color: $menu-background;
+  padding: 12px 40px;
+}
+
+// Styling for mobile navigation
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 40px;
+  height: 30px;
+  left: 20px;
+  top: 15px;
+
+  @media screen and (min-width: $nav-switch) {
+    display: none;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: $white;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: $menu-background;
+  padding-top: 100px;
+  font-size: 40px;
+}
+
+.bm-menu-wrap,
+.bm-overlay {
+  top: 0;
+  left: 0;
+
+  @media screen and (min-width: $nav-switch) {
+    display: none;
+  }
+}
+
+.bm-header {
+  background: $bm-header-background;
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100%;
+
+  img {
+    width: 65px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.bm-burger-menu {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  transition: all 0.3s ease;
+
+  img {
+    margin: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    backface-visibility: hidden;
+  }
+
+  .hideNavLogo {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: $nav-switch) {
+    display: none;
+  }
+}
+.bm-burger-menu-background {
+  background: $menu-background;
+}
+
+// Menu link styling
+
+//@extend-elements
+//.camera a:before, .camera a:after
+%extend_1 {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: "";
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+.camera {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  * {
+    box-sizing: border-box;
+    transition: all 0.35s ease;
+  }
+  li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1em;
+    padding: 0;
+  }
+  a {
+    padding: 0.5em 0.8em;
+    margin: 0.2em 0;
+    display: block;
+    color: $white_50;
+    position: relative;
+    text-decoration: none;
+    font-size: 12px;
+    &:before {
+      @extend %extend_1;
+      left: 0;
+      top: 0;
+      border-left: 3px solid $kdy-red;
+      border-top: 3px solid $kdy-red;
+      transform: translate(100%, 50%);
+    }
+    &:after {
+      @extend %extend_1;
+      right: 0;
+      bottom: 0;
+      border-right: 3px solid $kdy-red;
+      border-bottom: 3px solid $kdy-red;
+      transform: translate(-100%, -50%);
+    }
+    &:hover {
+      color: $white;
+      &:before {
+        transform: translate(0%, 0);
+        opacity: 1;
+      }
+      &:after {
+        transform: translate(0%, 0);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (min-width: $break-large) {
+      font-size: 16px;
+    }
+  }
+  .current a {
+    color: $white;
+    &:before {
+      transform: translate(0%, 0);
+      opacity: 1;
+    }
+    &:after {
+      transform: translate(0%, 0);
+      opacity: 1;
+    }
+  }
+}
