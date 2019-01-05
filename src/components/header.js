@@ -71,14 +71,14 @@ class Header extends Component {
               />
             </div>
             <div className="col-xs-12">
-              <button className="btn btn-primary">
-                <span className="btn-content" href="tel:1-408-555-5555">
-                  (514) 559-0578
-                </span>
-                <span className="icon">
-                  <i className="fa fa-phone" aria-hidden="true" />
-                </span>
-              </button>
+              <a href="tel:1-514-559-0578">
+                <button className="btn btn-primary">
+                  <span className="btn-content">(514) 559-0578</span>
+                  <span className="icon">
+                    <i className="fa fa-phone" aria-hidden="true" />
+                  </span>
+                </button>
+              </a>
               <NavLink exact={true} to="/contact">
                 <button className="btn btn-primary">
                   <span className="btn-content">Get A Quote</span>
