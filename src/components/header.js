@@ -6,7 +6,7 @@ class Header extends Component {
   parallaxImage(param) {
     switch (param) {
       case "/":
-        return [require("../Assets/images/mtl.png"), "", ""];
+        return [require("../Assets/images/mtl.png"), "", "", ""];
       case "/services":
         return [
           require("../Assets/images/mtl.png"),
@@ -44,9 +44,11 @@ class Header extends Component {
         ];
     }
   }
-
-  headerLogo(param) {
-    return param === "/" ? { className: " logo" } : { className: "hideLogo" };
+  // className="container homeHeaderContent"
+  homeHeaderContent(param) {
+    return param === "/"
+      ? { className: " container homeHeaderContent" }
+      : { className: "hidden" };
   }
 
   render() {
@@ -58,11 +60,26 @@ class Header extends Component {
         bgImageAlt="Parallax Background Image"
         strength={-140}
       >
-        <img
-          {...this.headerLogo(this.props.location.pathname)}
-          src={require("../Assets/images/logoWhite.png")}
-          alt="KDY"
-        />
+        <div {...this.homeHeaderContent(this.props.location.pathname)}>
+          <div className="row ">
+            <div className="col-xs-12">
+              <img
+                className="logo"
+                src={require("../Assets/images/logoWhite.png")}
+                alt="KDY"
+              />
+            </div>
+            <div className="col-xs-12 buttonWrapper">
+              <button type="button" className="btn btn-primary ">
+                Get A Quote
+              </button>
+              <button type="button" className="btn btn-success">
+                (514) 559-0578
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div className="parallaxTextContainer">
           <h1>
             {this.parallaxImage(this.props.location.pathname)[1]}

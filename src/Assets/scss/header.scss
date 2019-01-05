@@ -5,7 +5,7 @@
     height: 350px;
     background: $parallax-overlay;
     @media screen and (max-width: $break-small) {
-      height: 250px;
+      height: 265px;
     }
     @media screen and (min-width: $break-large) {
       height: 450px;
@@ -60,25 +60,48 @@
   }
 }
 
-.logo {
-  width: 210px;
-  height: 210px;
+.homeHeaderContent {
   position: absolute;
+  text-align: center;
+  width: 100%;
   top: 60%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+
+  .buttonWrapper {
+    button {
+      margin: 5px 4px 30px 4px;
+      padding: 8px;
+      font-size: 14px;
+      width: 210px;
+
+      @media screen and (max-width: $break-small) {
+        margin: 2px 2px 5px 2px;
+        padding: 4px;
+        font-size: 12px;
+        width: 150px;
+      }
+      @media screen and (min-width: $break-large) {
+        margin: 10px 6px 35px 6px;
+        padding: 12px;
+        font-size: 16px;
+        width: 270px;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 210px;
+  height: 210px;
 
   @media screen and (max-width: $break-small) {
     width: 150px;
     height: 150px;
   }
   @media screen and (min-width: $break-large) {
-    width: 275px;
-    height: 275px;
+    width: 270px;
+    height: 270px;
   }
-}
-
-.hideLogo {
-  display: none;
 }

@@ -106,6 +106,7 @@
 }
 
 .bm-burger-menu {
+  background: $menu-background;
   height: 60px;
   width: 100%;
   position: fixed;
@@ -126,16 +127,9 @@
     backface-visibility: hidden;
   }
 
-  .hideNavLogo {
-    opacity: 0;
-  }
-
   @media screen and (min-width: $nav-switch) {
     display: none;
   }
-}
-.bm-burger-menu-background {
-  background: $menu-background;
 }
 
 /*  link styling  */

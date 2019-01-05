@@ -60,18 +60,8 @@ class Navbar extends Component {
           <ul className="camera">{linksMarkup}</ul>
         </nav>
 
-        <div
-          className={
-            this.state.isTop
-              ? "bm-burger-menu"
-              : " bm-burger-menu bm-burger-menu-background"
-          }
-        >
-          <img
-            className={this.state.isTop ? " hideNavLogo" : ""}
-            src={require("../Assets/images/logoWhiteSmall.png")}
-            alt="KDY"
-          />
+        <div className={"bm-burger-menu"}>
+          <img src={require("../Assets/images/logoWhiteSmall.png")} alt="KDY" />
         </div>
         <Menu
           className="bm-burger-button "
