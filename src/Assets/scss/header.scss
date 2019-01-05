@@ -2,13 +2,13 @@
 
 .parallax {
   .parallax-image-container {
-    height: 350px;
+    height: 390px;
     background: $parallax-overlay;
     @media screen and (max-width: $break-small) {
-      height: 265px;
+      height: 280px;
     }
     @media screen and (min-width: $break-large) {
-      height: 450px;
+      height: 500px;
     }
   }
 
@@ -69,39 +69,106 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
 
-  .buttonWrapper {
-    button {
-      margin: 5px 4px 30px 4px;
-      padding: 8px;
-      font-size: 14px;
-      width: 210px;
+  .logo {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 20px;
 
-      @media screen and (max-width: $break-small) {
-        margin: 2px 2px 5px 2px;
-        padding: 4px;
-        font-size: 12px;
-        width: 150px;
-      }
-      @media screen and (min-width: $break-large) {
-        margin: 10px 6px 35px 6px;
-        padding: 12px;
-        font-size: 16px;
-        width: 270px;
-      }
+    @media screen and (max-width: $break-small) {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: $break-large) {
+      width: 270px;
+      height: 270px;
+      margin-bottom: 30px;
     }
   }
-}
 
-.logo {
-  width: 210px;
-  height: 210px;
+  // styling for call to action button
+  .btn {
+    border-radius: 4px;
+    color: $btn-color;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    line-height: 1;
+    margin: 0px 4px 40px 4px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    width: 210px;
 
-  @media screen and (max-width: $break-small) {
-    width: 150px;
-    height: 150px;
-  }
-  @media screen and (min-width: $break-large) {
-    width: 270px;
-    height: 270px;
+    @media screen and (max-width: $break-small) {
+      margin: 0px 2px 5px 2px;
+      padding: 4px;
+      font-size: 12px;
+      width: 150px;
+    }
+    @media screen and (min-width: $break-large) {
+      margin: 0px 6px 50px 6px;
+      padding: 12px;
+      font-size: 16px;
+      width: 270px;
+    }
+
+    .btn-content {
+      font-size: 1em;
+      line-height: 1.2;
+      padding: 0 26px;
+      position: relative;
+      right: 0;
+      transition: right 300ms ease;
+      display: block;
+      text-align: left;
+
+      @media screen and (max-width: $break-small) {
+        padding: 0 15px;
+      }
+    }
+    .icon {
+      border-left: 1px solid $btn-color;
+      color: $btn-color;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 50%;
+      transition: all 300ms ease;
+      transform: translateY(-50%);
+      width: 58px;
+      height: 70%;
+
+      @media screen and (max-width: $break-small) {
+        width: 30px;
+      }
+
+      i {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: $btn-color;
+      opacity: 0;
+      transition: opacity 300ms ease;
+    }
+    &:hover {
+      .btn-content {
+        right: 100%;
+      }
+      .icon {
+        border-left: 0;
+        width: 100%;
+      }
+    }
   }
 }

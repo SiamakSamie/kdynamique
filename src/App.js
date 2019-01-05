@@ -20,7 +20,7 @@ class App extends Component {
       { label: "Services", link: "/services" },
       { label: "Portfolio", link: "/portfolio" },
       { label: "Our Team", link: "/about" },
-      { label: "Contact Us", link: "/contact-us" }
+      { label: "Contact Us", link: "/contact" }
     ];
 
     return (

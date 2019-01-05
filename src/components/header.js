@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { Parallax } from "react-parallax";
+import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   parallaxImage(param) {
@@ -28,7 +29,7 @@ class Header extends Component {
           ".",
           "Take a look at the team"
         ];
-      case "/contact-us":
+      case "/contact":
         return [
           require("../Assets/images/mtl4.jpg"),
           "Contact Us",
@@ -69,13 +70,23 @@ class Header extends Component {
                 alt="KDY"
               />
             </div>
-            <div className="col-xs-12 buttonWrapper">
-              <button type="button" className="btn btn-primary ">
-                Get A Quote
+            <div className="col-xs-12">
+              <button className="btn btn-primary">
+                <span className="btn-content" href="tel:1-408-555-5555">
+                  (514) 559-0578
+                </span>
+                <span className="icon">
+                  <i className="fa fa-phone" aria-hidden="true" />
+                </span>
               </button>
-              <button type="button" className="btn btn-success">
-                (514) 559-0578
-              </button>
+              <NavLink exact={true} to="/contact">
+                <button className="btn btn-primary">
+                  <span className="btn-content">Get A Quote</span>
+                  <span className="icon">
+                    <i className="fa fa-envelope" aria-hidden="true" />
+                  </span>
+                </button>
+              </NavLink>
             </div>
           </div>
         </div>
