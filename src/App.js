@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./Assets/css/default.min.css";
 import "./Assets/css/nav.min.css";
 import "./Assets/css/header.min.css";
+import "./Assets/css/home.min.css";
 
 class App extends Component {
   render() {
