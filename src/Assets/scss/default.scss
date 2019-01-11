@@ -13,10 +13,14 @@ body {
       font-size: 45px;
     }
   }
-  p {
+  h3 {
     font-size: 18px;
     @media screen and (max-width: $break-small) {
       font-size: 15px;
     }
+  }
+  h4 {
+    font-weight: 700;
+    padding: 12px;
   }
 }

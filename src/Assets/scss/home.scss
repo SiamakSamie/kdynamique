@@ -47,26 +47,55 @@
 
 .homeStatement {
   background: #2f2f2f;
-  padding: 80px;
+  padding: 20px;
   margin-top: -2px; //1px gap shows between rows sometimes
   text-align: center;
   color: $white;
   h2 {
     padding-bottom: 20px;
   }
-  p {
-    max-width: 500px;
+  h3 {
+    max-width: 400px;
     margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .container-fluid {
+    max-width: 1200px;
+    padding: 30px;
+    .box {
+      margin-bottom: 25px;
+      border-radius: 5px;
+      .fa {
+        color: $kdy-red;
+      }
+    }
   }
 }
 .testimonials {
   text-align: center;
   h1 {
     color: $white;
-    padding: 240px;
+    padding: 240px 0;
   }
 }
 .clientList {
   text-align: center;
-  padding: 240px;
+  padding: 40px 0;
+  h1 {
+    padding-bottom: 35px;
+  }
+  .clientListLogos {
+    max-width: 900px;
+    margin: 0 auto;
+    img {
+      height: 120px;
+      width: 120px;
+      margin: 0 25px;
+      @media screen and (max-width: $break-small) {
+        height: 90px;
+        width: 90px;
+        margin: 0 10px;
+      }
+    }
+  }
 }

@@ -3,6 +3,20 @@ import { Parallax } from "react-parallax";
 
 class Home extends Component {
   render() {
+    let logos = [
+      { label: "Guru", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") }
+    ];
+    let logo = logos.map((logo, i) => (
+      <img key={i} src={logo.src} alt={logo.label} />
+    ));
+
     return (
       <div className="container-fluid">
         <div className="row homeIntroLine">
@@ -25,15 +39,53 @@ class Home extends Component {
           </div>
         </div>
         <div className="row homeStatement">
-          <h1>Montreal Video Production Team</h1>
-          <p>
+          <h2>Montreal Video Production Team</h2>
+          <h3>
             Bruh, do you want to be super cool? Well let me tell you, the super
             coolest thing you can do is throw money in my face to make you a
             dope videop. pls n thankst
-          </p>
+          </h3>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-sm-4">
+                <div className=" box">
+                  <i className="fa fa-camera-retro fa-3x" />
+                  <h4>pre production</h4>
+                  <p>
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
+                  </p>
+                </div>
+              </div>
+              <div className="col-sm-4">
+                <div className=" box">
+                  <i className="fa fa-camera-retro fa-3x" />
+                  <h4>pre production</h4>
+                  <p>
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
+                  </p>
+                </div>
+              </div>
+              <div className="col-sm-4">
+                <div className=" box">
+                  <i className="fa fa-camera-retro fa-3x" />
+                  <h4>pre production</h4>
+                  <p>
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="row clientList">
           <h1>Client List</h1>
+          <div className="clientListLogos">{logo}</div>
         </div>
         <div className="row testimonials">
           <Parallax
