@@ -71,13 +71,7 @@
     }
   }
 }
-.testimonials {
-  text-align: center;
-  h1 {
-    color: $white;
-    padding: 240px 0;
-  }
-}
+
 .clientList {
   text-align: center;
   padding: 40px 0;
@@ -96,6 +90,59 @@
         width: 90px;
         margin: 0 10px;
       }
+    }
+  }
+}
+
+.testimonials {
+  text-align: center;
+  h1 {
+    padding-top: 55px;
+    color: $white;
+  }
+
+  .slick-prev {
+    margin-left: 40px;
+    z-index: 9999;
+  }
+
+  .slick-next {
+    margin-right: 40px;
+  }
+
+  .testimonialContainer {
+    width: 65%;
+    margin: auto;
+    padding: 50px 0;
+    color: $white;
+    @media screen and (max-width: $break-small) {
+      padding: 40px 0;
+    }
+    .fa-quote-left {
+      color: $white_50;
+      float: left;
+      margin: -5px 0px;
+    }
+    .fa-quote-right {
+      color: $white_50;
+      float: right;
+      margin: -5px 0px;
+    }
+    h2 {
+      color: $white;
+      font-style: italic;
+      font-size: 25px;
+      margin: 0px;
+      padding: 0px 30px;
+      display: inline-block;
+      @media screen and (max-width: $break-small) {
+        font-size: 18px;
+      }
+    }
+  }
+  .react-parallax {
+    .react-parallax-content {
+      background: $parallax-overlay;
     }
   }
 }

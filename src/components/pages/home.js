@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Parallax } from "react-parallax";
+import Slider from "react-slick";
 
 class Home extends Component {
   render() {
@@ -16,6 +17,43 @@ class Home extends Component {
     let logo = logos.map((logo, i) => (
       <img key={i} src={logo.src} alt={logo.label} />
     ));
+
+    let testimonial = [
+      {
+        label: "Guru",
+        text: "This is a testimonial example, this is how it'll look so yeah"
+      },
+      {
+        label: "Guru",
+        text:
+          "I'm a pretty big fan of this look and this slider it even has touch capabikitites"
+      },
+      {
+        label: "Guru",
+        text:
+          "I remember using it a loong time ago but it got better since then"
+      }
+    ];
+    let testimonials = testimonial.map((testimonial, i) => (
+      <div key={i}>
+        <h1>{testimonial.label}</h1>
+        <div className="testimonialContainer">
+          <i className="fas fa-quote-left" />
+          <h2 alt={testimonial.label}>{testimonial.text}</h2>
+          <i className="fas fa-quote-right" />
+        </div>
+      </div>
+    ));
+
+    var sliderSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000
+    };
 
     return (
       <div className="container-fluid">
@@ -89,16 +127,17 @@ class Home extends Component {
         </div>
         <div className="row testimonials">
           <Parallax
-            blur={10}
+            blur={4}
             bgImage={require("../../Assets/images/mtl4.jpg")}
-            bgImageAlt="the cat"
-            strength={200}
+            bgImageAlt="testimonial"
+            strength={600}
           >
             <h1>Testimonials section</h1>
+            <Slider {...sliderSettings}>{testimonials}</Slider>
           </Parallax>
         </div>
         <div className="row clientList">
-          <h1>Call To Action Section</h1>
+          <h1>Call to action</h1>
         </div>
       </div>
     );

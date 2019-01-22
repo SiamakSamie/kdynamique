@@ -59,7 +59,7 @@ class Header extends Component {
         blur={{ min: -9, max: 15 }}
         bgImage={this.parallaxImage(this.props.location.pathname)[0]}
         bgImageAlt="Parallax Background Image"
-        strength={-140}
+        strength={400}
       >
         <div {...this.homeHeaderContent(this.props.location.pathname)}>
           <div className="row ">
