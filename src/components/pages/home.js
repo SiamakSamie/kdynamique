@@ -12,6 +12,8 @@ class Home extends Component {
       { label: "kdy", src: require("../../Assets/images/guru.png") },
       { label: "kdy", src: require("../../Assets/images/guru.png") },
       { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/guru.png") },
       { label: "kdy", src: require("../../Assets/images/guru.png") }
     ];
     let logo = logos.map((logo, i) => (
@@ -20,28 +22,33 @@ class Home extends Component {
 
     let testimonial = [
       {
-        label: "Guru",
+        name: "Joe Schmow",
+        label: "CEO, Guru Energy",
         text: "This is a testimonial example, this is how it'll look so yeah"
       },
       {
-        label: "Guru",
+        name: "Joe Schmow",
+        label: "CEO, Guru Energy",
         text:
           "I'm a pretty big fan of this look and this slider it even has touch capabikitites"
       },
       {
-        label: "Guru",
+        name: "Joe Schmow",
+        label: "CEO, Guru Energy",
         text:
           "I remember using it a loong time ago but it got better since then"
       }
     ];
     let testimonials = testimonial.map((testimonial, i) => (
       <div key={i}>
-        <h1>{testimonial.label}</h1>
         <div className="testimonialContainer">
           <i className="fas fa-quote-left" />
           <h2 alt={testimonial.label}>{testimonial.text}</h2>
           <i className="fas fa-quote-right" />
         </div>
+        <h3>
+          {testimonial.name} <span>{testimonial.label}</span>
+        </h3>
       </div>
     ));
 
@@ -132,7 +139,7 @@ class Home extends Component {
             bgImageAlt="testimonial"
             strength={600}
           >
-            <h1>Testimonials section</h1>
+            <h1>Testimonials</h1>
             <Slider {...sliderSettings}>{testimonials}</Slider>
           </Parallax>
         </div>

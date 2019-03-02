@@ -89,7 +89,7 @@
   // styling for call to action button
   .btn {
     border-radius: 4px;
-    color: $btn-color;
+    color: $white;
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -129,8 +129,8 @@
       }
     }
     .icon {
-      border-left: 1px solid $btn-color;
-      color: $btn-color;
+      border-left: 1px solid $white;
+      color: $white;
       position: absolute;
       right: 0;
       text-align: center;
@@ -157,7 +157,7 @@
       bottom: 0;
       right: 0;
       left: 0;
-      background-color: $btn-color;
+      background-color: $white;
       opacity: 0;
       transition: opacity 300ms ease;
     }

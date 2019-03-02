@@ -5,14 +5,15 @@ body {
   h1 {
     padding: 10px;
     margin: 0px;
-    font-size: 40px;
+    font-size: 34px;
     @media screen and (max-width: $break-small) {
-      font-size: 30px;
+      font-size: 26px;
     }
     @media screen and (min-width: $break-large) {
-      font-size: 45px;
+      font-size: 38px;
     }
   }
+
   h3 {
     font-size: 18px;
     @media screen and (max-width: $break-small) {
