@@ -90,11 +90,12 @@ class Home extends Component {
             coolest thing you can do is throw money in my face to make you a
             dope videop. pls n thankst
           </h3>
+          <hr />
           <div className="container-fluid">
             <div className="row">
               <div className="col-sm-4">
                 <div className=" box">
-                  <i className="fa fa-camera-retro fa-3x" />
+                  <i className="fas fa-pencil-alt fa-3x" />
                   <h4>pre production</h4>
                   <p>
                     I am too busy trying to make shit pretty to even come up
@@ -105,7 +106,7 @@ class Home extends Component {
               </div>
               <div className="col-sm-4">
                 <div className=" box">
-                  <i className="fa fa-camera-retro fa-3x" />
+                  <i className="fas fa-video fa-3x" />
                   <h4>pre production</h4>
                   <p>
                     I am too busy trying to make shit pretty to even come up
@@ -116,7 +117,7 @@ class Home extends Component {
               </div>
               <div className="col-sm-4">
                 <div className=" box">
-                  <i className="fa fa-camera-retro fa-3x" />
+                  <i className="fas fa-desktop fa-3x" />
                   <h4>pre production</h4>
                   <p>
                     I am too busy trying to make shit pretty to even come up

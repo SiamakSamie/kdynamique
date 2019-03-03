@@ -5,6 +5,7 @@ import Nav from "./components/nav";
 import Header from "./components/header";
 import Home from "./components/pages/home";
 import About from "./components/pages/about";
+import Contact from "./components/pages/contact";
 import Footer from "./components/footer";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -15,6 +16,7 @@ import "./Assets/css/nav.min.css";
 import "./Assets/css/header.min.css";
 import "./Assets/css/home.min.css";
 import "./Assets/css/footer.min.css";
+import "./Assets/css/contact.min.css";
 
 class App extends Component {
   render() {
@@ -33,6 +35,7 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
           <Footer />
         </div>
       </Router>

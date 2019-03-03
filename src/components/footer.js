@@ -4,16 +4,26 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <h2>
-          <i className="fas fa-angle-double-up" />
-        </h2>
-        <div id="container">
-          <div id="cont">
-            <div className="footer_center">
-              <h3>Footer Content</h3>
-            </div>
-          </div>
-        </div>
+        <h3>
+          kdypro.com <i className="far fa-copyright" /> 2019
+        </h3>
+        <ul className="social-icons">
+          <li>
+            <a href="" className="social-icon">
+              <i className="fab fa-facebook-f" />
+            </a>
+          </li>
+          <li>
+            <a href="" className="social-icon">
+              <i className="fab fa-instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="" className="social-icon">
+              <i className="fab fa-youtube" />
+            </a>
+          </li>
+        </ul>
       </div>
     );
   }
