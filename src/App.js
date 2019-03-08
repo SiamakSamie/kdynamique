@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // includes
 import "./Assets/css/default.min.css";
+import "./Assets/css/button.min.css";
 import "./Assets/css/nav.min.css";
 import "./Assets/css/header.min.css";
 import "./Assets/css/home.min.css";
@@ -20,13 +21,7 @@ import "./Assets/css/contact.min.css";
 
 class App extends Component {
   render() {
-    let links = [
-      { label: "Home", link: "/" },
-      { label: "Services", link: "/services" },
-      { label: "Portfolio", link: "/portfolio" },
-      { label: "Our Team", link: "/about" },
-      { label: "Contact Us", link: "/contact" }
-    ];
+    let links = [{ label: "Home", link: "/" }, { label: "Services", link: "/services" }, { label: "Portfolio", link: "/portfolio" }, { label: "Our Team", link: "/about" }, { label: "Contact Us", link: "/contact" }];
 
     return (
       <Router basename={process.env.PUBLIC_URL}>
