@@ -42,19 +42,19 @@ class Portfolio extends Component {
       { name: "Siamak Demo Reel", category: "demo", videoID: "6WYJMBE-Rr0" }
     ];
     let filteredVideos;
-    if (this.state.activeIndex === "1") {
+    if (this.state.activeIndex === 1) {
       filteredVideos = videos.filter(function(videos) {
         return videos.category === "demo";
       });
-    } else if (this.state.activeIndex === "2") {
+    } else if (this.state.activeIndex === 2) {
       filteredVideos = videos.filter(function(videos) {
         return videos.category === "films";
       });
-    } else if (this.state.activeIndex === "3") {
+    } else if (this.state.activeIndex === 3) {
       filteredVideos = videos.filter(function(videos) {
         return videos.category === "corporate";
       });
-    } else if (this.state.activeIndex === "4") {
+    } else if (this.state.activeIndex === 4) {
       filteredVideos = videos.filter(function(videos) {
         return videos.category === "music";
       });
