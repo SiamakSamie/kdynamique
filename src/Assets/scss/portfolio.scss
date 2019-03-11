@@ -1,0 +1,59 @@
+@import "_config.scss";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+
+.portfolio {
+  img {
+    width: 300px;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.2s;
+      filter: brightness(1.2);
+    }
+  }
+  .imgText {
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .masonry {
+    margin: 0 auto;
+  }
+  .videoImg {
+    padding: 10px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 35px 0;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #2e2e2e;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  li:hover {
+    color: #757575;
+  }
+
+  li.active {
+    color: #757575;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+}
+
+.modal-video {
+  background-color: rgba(0, 0, 0, 0.8);
+  .modal-video-close-btn {
+    right: 0;
+  }
+}

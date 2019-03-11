@@ -25,9 +25,7 @@ class Navbar extends Component {
   }
 
   getNavStyles = path => {
-    return this.props.location.pathname === path
-      ? { className: " current" }
-      : { className: "" };
+    return this.props.location.pathname === path ? { className: " current" } : { className: "" };
   };
 
   componentDidMount() {
@@ -66,13 +64,9 @@ class Navbar extends Component {
         <Menu
           className="bm-burger-button "
           isOpen={this.state.menuOpen}
-          onStateChange={state => this.handleStateChange(state)}
-        >
+          onStateChange={state => this.handleStateChange(state)}>
           <div className="bm-header">
-            <img
-              src={require("../Assets/images/logoWhiteSmall.png")}
-              alt="KDY"
-            />
+            <img src={require("../Assets/images/logoWhiteSmall.png")} alt="KDY" />
           </div>
           <ul className="camera">{linksMarkup}</ul>
         </Menu>

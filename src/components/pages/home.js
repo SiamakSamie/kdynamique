@@ -16,9 +16,7 @@ class Home extends Component {
       { label: "kdy", src: require("../../Assets/images/guru.png") },
       { label: "kdy", src: require("../../Assets/images/guru.png") }
     ];
-    let logo = logos.map((logo, i) => (
-      <img key={i} src={logo.src} alt={logo.label} />
-    ));
+    let logo = logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.label} />);
 
     let testimonial = [
       {
@@ -29,14 +27,12 @@ class Home extends Component {
       {
         name: "Joe Schmow",
         label: "CEO, Guru Energy",
-        text:
-          "I'm a pretty big fan of this look and this slider it even has touch capabikitites"
+        text: "I'm a pretty big fan of this look and this slider it even has touch capabikitites"
       },
       {
         name: "Joe Schmow",
         label: "CEO, Guru Energy",
-        text:
-          "I remember using it a loong time ago but it got better since then"
+        text: "I remember using it a loong time ago but it got better since then"
       }
     ];
     let testimonials = testimonial.map((testimonial, i) => (
@@ -86,9 +82,8 @@ class Home extends Component {
         <div className="row homeStatement">
           <h2>Montreal Video Production Team</h2>
           <h3>
-            Bruh, do you want to be super cool? Well let me tell you, the super
-            coolest thing you can do is throw money in my face to make you a
-            dope videop. pls n thankst
+            Bruh, do you want to be super cool? Well let me tell you, the super coolest thing you
+            can do is throw money in my face to make you a dope videop. pls n thankst
           </h3>
           <hr />
           <div className="container-fluid">
@@ -98,9 +93,8 @@ class Home extends Component {
                   <i className="fas fa-pencil-alt fa-3x" />
                   <h4>pre production</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
+                    I am too busy trying to make shit pretty to even come up with decent placeholder
+                    text. Someone better help me with part or imma cut a bitch
                   </p>
                 </div>
               </div>
@@ -109,9 +103,8 @@ class Home extends Component {
                   <i className="fas fa-video fa-3x" />
                   <h4>pre production</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
+                    I am too busy trying to make shit pretty to even come up with decent placeholder
+                    text. Someone better help me with part or imma cut a bitch
                   </p>
                 </div>
               </div>
@@ -120,9 +113,8 @@ class Home extends Component {
                   <i className="fas fa-desktop fa-3x" />
                   <h4>pre production</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
+                    I am too busy trying to make shit pretty to even come up with decent placeholder
+                    text. Someone better help me with part or imma cut a bitch
                   </p>
                 </div>
               </div>
@@ -138,8 +130,7 @@ class Home extends Component {
             blur={4}
             bgImage={require("../../Assets/images/mtl4.jpg")}
             bgImageAlt="testimonial"
-            strength={600}
-          >
+            strength={600}>
             <h1>Testimonials</h1>
             <Slider {...sliderSettings}>{testimonials}</Slider>
           </Parallax>
