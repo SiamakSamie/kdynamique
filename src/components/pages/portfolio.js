@@ -71,9 +71,6 @@ class Portfolio extends Component {
     return (
       <div className="portfolio">
         <ul>
-          <li className={this.state.activeIndex === 0 ? "active" : null} onClick={this.toggleClass.bind(this, 0)} data-filter="*">
-            All
-          </li>
           <li className={this.state.activeIndex === 1 ? "active" : null} onClick={this.toggleClass.bind(this, 1)}>
             Demo-Reels
           </li>
@@ -85,6 +82,9 @@ class Portfolio extends Component {
           </li>
           <li className={this.state.activeIndex === 4 ? "active" : null} onClick={this.toggleClass.bind(this, 4)}>
             Music
+          </li>
+          <li className={this.state.activeIndex === 0 ? "active" : null} onClick={this.toggleClass.bind(this, 0)} data-filter="*">
+            All
           </li>
         </ul>
         <Masonry className="masonry" options={masonryOptions}>

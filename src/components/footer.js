@@ -9,17 +9,17 @@ class Footer extends Component {
         </h3>
         <ul className="social-icons">
           <li>
-            <a href="" className="social-icon">
+            <a href="https://www.facebook.com/kdyprod" className="social-icon">
               <i className="fab fa-facebook-f" />
             </a>
           </li>
           <li>
-            <a href="" className="social-icon">
+            <a href="https://www.instagram.com/kdy.productions/" className="social-icon">
               <i className="fab fa-instagram" />
             </a>
           </li>
           <li>
-            <a href="" className="social-icon">
+            <a href="https://www.youtube.com/channel/UCC-GUSc3umEDEew5uLS2jeg" className="social-icon">
               <i className="fab fa-youtube" />
             </a>
           </li>

@@ -14,6 +14,9 @@ fieldset {
   .form-control {
     height: 50px;
   }
+  .message {
+    height: 70px;
+  }
 
   .input-group {
     z-index: 0;
@@ -65,4 +68,30 @@ fieldset {
       }
     }
   }
+}
+.emailHeader {
+  margin: 0;
+  padding: 22px;
+  background: cadetblue;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+.emailBody {
+  margin: 0;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.emailModalButton {
+  padding: 15px;
+  margin: 0 auto;
+  bottom: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }

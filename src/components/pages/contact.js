@@ -1,10 +1,64 @@
 import React, { Component } from "react";
+import axios from "axios";
+import Modal from "react-awesome-modal";
 
 class Contact extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      emailHeader: "Sorry!",
+      emailBody: "There was a problem. Email us directly at info@kdypro.com or give us a call!",
+      visible: false
+    };
+  }
+
+  emailResponse(emailHeader, emailBody) {
+    this.setState({ emailHeader: emailHeader, emailBody: emailBody });
+  }
+
+  openModal() {
+    this.setState({
+      visible: true
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      visible: false
+    });
+  }
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    // get our form data out of state
+    const { message, phone, email, name } = this.state;
+
+    axios
+      .post("https://www.enformed.io/ghnyxjd4/", { message, phone, email, name })
+      .then(response => {
+        console.log(response);
+        this.emailResponse("Email sent!", "We will get back to you shortly");
+        this.openModal();
+      })
+      .catch(error => {
+        console.log(error);
+        this.emailResponse("There was a problem!", "Email directly at info@kdypro.com or give us a call!");
+        this.openModal();
+      });
+  };
+
   render() {
     return (
       <div className="container-fluid">
-        <form className="form-horizontal" action=" " method="post" id="contact_form">
+        <form className="form-horizontal" id="contact_form" onSubmit={this.onSubmit}>
           <fieldset>
             <legend>Something something something yay</legend>
 
@@ -17,7 +71,7 @@ class Contact extends Component {
                       <p className="addon-text">Name</p>
                     </div>
                   </span>
-                  <input name="name" placeholder="Name" className="form-control" type="text" required />
+                  <input name="name" placeholder="Name" className="form-control" type="text" onChange={this.onChange} required />
                 </div>
               </div>
             </div>
@@ -31,7 +85,7 @@ class Contact extends Component {
                       <p className="addon-text">E-mail</p>
                     </div>
                   </span>
-                  <input name="email" placeholder="E-Mail Address" className="form-control" type="text" required />
+                  <input name="email" placeholder="E-Mail Address" className="form-control" type="text" onChange={this.onChange} required />
                 </div>
               </div>
             </div>
@@ -45,7 +99,7 @@ class Contact extends Component {
                       <p className="addon-text">Phone</p>
                     </div>
                   </span>
-                  <input name="phone" placeholder="(845)555-1212" className="form-control" type="text" required />
+                  <input name="phone" placeholder="(845) 555-1212" className="form-control" type="text" onChange={this.onChange} />
                 </div>
               </div>
             </div>
@@ -59,7 +113,7 @@ class Contact extends Component {
                       <p className="addon-text">Message</p>
                     </div>
                   </span>
-                  <textarea className="form-control" name="comment" placeholder="Project Description" required />
+                  <textarea className="form-control message" name="message" placeholder="Project Description" onChange={this.onChange} required />
                 </div>
               </div>
             </div>
@@ -76,6 +130,15 @@ class Contact extends Component {
             </div>
           </fieldset>
         </form>
+        <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+          <div>
+            <h2 className="emailHeader">{this.state.emailHeader}</h2>
+            <h3 className="emailBody">{this.state.emailBody}</h3>
+            <button className="btn btn-primary emailModalButton" onClick={() => this.closeModal()}>
+              close
+            </button>
+          </div>
+        </Modal>
       </div>
     );
   }
