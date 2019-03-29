@@ -46,14 +46,25 @@ class Contact extends Component {
       .then(response => {
         console.log(response);
         this.emailResponse("Email sent!", "We will get back to you shortly");
+        this.resetForm();
         this.openModal();
       })
       .catch(error => {
         console.log(error);
         this.emailResponse("There was a problem!", "Email directly at info@kdypro.com or give us a call!");
+        this.resetForm();
         this.openModal();
       });
   };
+
+  resetForm(){
+    this.setState({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  }
 
   render() {
     return (
@@ -71,7 +82,7 @@ class Contact extends Component {
                       <p className="addon-text">Name</p>
                     </div>
                   </span>
-                  <input name="name" placeholder="Name" className="form-control" type="text" onChange={this.onChange} required />
+                  <input name="name" placeholder="Name" className="form-control" type="text" onChange={this.onChange} value={this.state.name} required />
                 </div>
               </div>
             </div>
@@ -85,7 +96,7 @@ class Contact extends Component {
                       <p className="addon-text">E-mail</p>
                     </div>
                   </span>
-                  <input name="email" placeholder="E-Mail Address" className="form-control" type="text" onChange={this.onChange} required />
+                  <input name="email" placeholder="E-Mail Address" className="form-control" type="text" onChange={this.onChange} value={this.state.email} required />
                 </div>
               </div>
             </div>
@@ -99,7 +110,7 @@ class Contact extends Component {
                       <p className="addon-text">Phone</p>
                     </div>
                   </span>
-                  <input name="phone" placeholder="(845) 555-1212" className="form-control" type="text" onChange={this.onChange} />
+                  <input name="phone" placeholder="(845) 555-1212" className="form-control" type="text" onChange={this.onChange} value={this.state.phone} />
                 </div>
               </div>
             </div>
@@ -113,7 +124,7 @@ class Contact extends Component {
                       <p className="addon-text">Message</p>
                     </div>
                   </span>
-                  <textarea className="form-control message" name="message" placeholder="Project Description" onChange={this.onChange} required />
+                  <textarea className="form-control message" name="message" placeholder="Project Description" onChange={this.onChange} value={this.state.message} required />
                 </div>
               </div>
             </div>
