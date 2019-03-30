@@ -57,22 +57,30 @@ class Contact extends Component {
       });
   };
 
-  resetForm(){
+  resetForm() {
     this.setState({
       name: "",
       email: "",
       phone: "",
-      message: "",
+      message: ""
     });
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid phone">
+        <div className="panel panel-phone">
+          <div className="panel-heading">
+            <div className="panel-title text-center">For a quick reply, give us a call</div>
+          </div>
+          <div className="panel-body text-center">
+            <h1>(514) 559-0578</h1>
+          </div>
+        </div>
+
         <form className="form-horizontal" id="contact_form" onSubmit={this.onSubmit}>
           <fieldset>
             <legend>Something something something yay</legend>
-
             <div className="form-group">
               <div className="col-md-12 inputGroupContainer">
                 <div className="input-group">
@@ -82,7 +90,15 @@ class Contact extends Component {
                       <p className="addon-text">Name</p>
                     </div>
                   </span>
-                  <input name="name" placeholder="Name" className="form-control" type="text" onChange={this.onChange} value={this.state.name} required />
+                  <input
+                    name="name"
+                    placeholder="Name"
+                    className="form-control"
+                    type="text"
+                    onChange={this.onChange}
+                    value={this.state.name}
+                    required
+                  />
                 </div>
               </div>
             </div>
@@ -96,7 +112,15 @@ class Contact extends Component {
                       <p className="addon-text">E-mail</p>
                     </div>
                   </span>
-                  <input name="email" placeholder="E-Mail Address" className="form-control" type="text" onChange={this.onChange} value={this.state.email} required />
+                  <input
+                    name="email"
+                    placeholder="E-Mail Address"
+                    className="form-control"
+                    type="text"
+                    onChange={this.onChange}
+                    value={this.state.email}
+                    required
+                  />
                 </div>
               </div>
             </div>
@@ -110,7 +134,14 @@ class Contact extends Component {
                       <p className="addon-text">Phone</p>
                     </div>
                   </span>
-                  <input name="phone" placeholder="(845) 555-1212" className="form-control" type="text" onChange={this.onChange} value={this.state.phone} />
+                  <input
+                    name="phone"
+                    placeholder="(845) 555-1212"
+                    className="form-control"
+                    type="text"
+                    onChange={this.onChange}
+                    value={this.state.phone}
+                  />
                 </div>
               </div>
             </div>
@@ -124,7 +155,14 @@ class Contact extends Component {
                       <p className="addon-text">Message</p>
                     </div>
                   </span>
-                  <textarea className="form-control message" name="message" placeholder="Project Description" onChange={this.onChange} value={this.state.message} required />
+                  <textarea
+                    className="form-control message"
+                    name="message"
+                    placeholder="Project Description"
+                    onChange={this.onChange}
+                    value={this.state.message}
+                    required
+                  />
                 </div>
               </div>
             </div>
