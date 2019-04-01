@@ -20,6 +20,7 @@ import "./Assets/css/home.min.css";
 import "./Assets/css/portfolio.min.css";
 import "./Assets/css/footer.min.css";
 import "./Assets/css/contact.min.css";
+import "./Assets/css/about.min.css";
 
 class App extends Component {
   render() {
