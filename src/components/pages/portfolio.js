@@ -3,7 +3,8 @@ import Masonry from "react-masonry-component";
 import ModalVideo from "react-modal-video";
 
 const masonryOptions = {
-  fitWidth: true
+  fitWidth: true,
+  columnWidth: 25
 };
 
 class Portfolio extends Component {
@@ -28,12 +29,28 @@ class Portfolio extends Component {
   }
   render() {
     let videos = [
-      { name: "Siamak Demo Reel", category: "corporate", videoID: "6WYJMBE-Rr0" },
+      {
+        name: "Siamak Demo Reel",
+        category: "corporate",
+        videoID: "6WYJMBE-Rr0"
+      },
       { name: "anticipation", category: "corporate", videoID: "-PKksZtYXGA" },
-      { name: "this is a really long title", category: "corporate", videoID: "SZq4HRF1ErE" },
-      { name: "The horror experience", category: "corporate", videoID: "6WYJMBE-Rr0" },
+      {
+        name: "this is a really long title",
+        category: "corporate",
+        videoID: "SZq4HRF1ErE"
+      },
+      {
+        name: "The horror experience",
+        category: "corporate",
+        videoID: "6WYJMBE-Rr0"
+      },
       { name: "ShuttleControl", category: "corporate", videoID: "6WYJMBE-Rr0" },
-      { name: "This is an insanely long title.", category: "films", videoID: "6WYJMBE-Rr0" },
+      {
+        name: "This is an insanely long title.",
+        category: "films",
+        videoID: "6WYJMBE-Rr0"
+      },
       { name: "Siamak Demo Reel", category: "films", videoID: "6WYJMBE-Rr0" },
       { name: "Siamak Demo Reel", category: "films", videoID: "6WYJMBE-Rr0" },
       { name: "Siamak Demo Reel", category: "films", videoID: "6WYJMBE-Rr0" },
@@ -64,33 +81,60 @@ class Portfolio extends Component {
     let video = filteredVideos.map((object, i) => (
       <div key={i} className="videoImg">
         <div className="imgText">{object.name}</div>
-        <img src={"https://img.youtube.com/vi/" + object.videoID + "/0.jpg"} onClick={this.openModal.bind(this, object.videoID)} alt={object.name} />
+        <img
+          src={"https://img.youtube.com/vi/" + object.videoID + "/0.jpg"}
+          onClick={this.openModal.bind(this, object.videoID)}
+          alt={object.name}
+        />
       </div>
     ));
 
     return (
       <div className="portfolio">
         <ul>
-          <li className={this.state.activeIndex === 1 ? "active" : null} onClick={this.toggleClass.bind(this, 1)}>
+          <li
+            className={this.state.activeIndex === 1 ? "active" : null}
+            onClick={this.toggleClass.bind(this, 1)}
+          >
             Demo-Reels
           </li>
-          <li className={this.state.activeIndex === 2 ? "active" : null} onClick={this.toggleClass.bind(this, 2)}>
+          <li
+            className={this.state.activeIndex === 2 ? "active" : null}
+            onClick={this.toggleClass.bind(this, 2)}
+          >
             Films
           </li>
-          <li className={this.state.activeIndex === 3 ? "active" : null} onClick={this.toggleClass.bind(this, 3)}>
+          <li
+            className={this.state.activeIndex === 3 ? "active" : null}
+            onClick={this.toggleClass.bind(this, 3)}
+          >
             Corporate
           </li>
-          <li className={this.state.activeIndex === 4 ? "active" : null} onClick={this.toggleClass.bind(this, 4)}>
+          <li
+            className={this.state.activeIndex === 4 ? "active" : null}
+            onClick={this.toggleClass.bind(this, 4)}
+          >
             Music
           </li>
-          <li className={this.state.activeIndex === 0 ? "active" : null} onClick={this.toggleClass.bind(this, 0)} data-filter="*">
+          <li
+            className={this.state.activeIndex === 0 ? "active" : null}
+            onClick={this.toggleClass.bind(this, 0)}
+            data-filter="*"
+          >
             All
           </li>
         </ul>
-        <Masonry className="masonry" options={masonryOptions}>
-          {video}
-        </Masonry>
-        <ModalVideo channel="youtube" isOpen={this.state.isOpen} videoId={this.state.videoID} onClose={() => this.setState({ isOpen: false })} />
+        <div className="masonryContainer">
+          <Masonry className="masonry" options={masonryOptions}>
+            {video}
+          </Masonry>
+        </div>
+        <ModalVideo
+          channel="youtube"
+          isOpen={this.state.isOpen}
+          videoId={this.state.videoID}
+          onClose={() => this.setState({ isOpen: false })}
+        />
       </div>
     );
   }
