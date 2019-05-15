@@ -16,7 +16,9 @@ class Home extends Component {
       { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
       { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") }
     ];
-    let logo = logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.label} />);
+    let logo = logos.map((logo, i) => (
+      <img key={i} src={logo.src} alt={logo.label} />
+    ));
 
     let testimonial = [
       {
@@ -27,12 +29,14 @@ class Home extends Component {
       {
         name: "Joe Schmow",
         label: "CEO, Guru Energy",
-        text: "I'm a pretty big fan of this look and this slider it even has touch capabikitites"
+        text:
+          "I'm a pretty big fan of this look and this slider it even has touch capabikitites"
       },
       {
         name: "Joe Schmow",
         label: "CEO, Guru Energy",
-        text: "I remember using it a loong time ago but it got better since then"
+        text:
+          "I remember using it a loong time ago but it got better since then"
       }
     ];
     let testimonials = testimonial.map((testimonial, i) => (
@@ -82,8 +86,9 @@ class Home extends Component {
         <div className="row homeStatement">
           <h2>Montreal Video Production Team</h2>
           <h3>
-            Bruh, do you want to be super cool? Well let me tell you, the super coolest thing you can do is throw money in my face to make you a dope
-            videop. pls n thankst
+            Bruh, do you want to be super cool? Well let me tell you, the super
+            coolest thing you can do is throw money in my face to make you a
+            dope videop. pls n thankst
           </h3>
           <hr />
           <div className="container-fluid">
@@ -93,8 +98,9 @@ class Home extends Component {
                   <i className="fas fa-pencil-alt fa-3x" />
                   <h4>pre production</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
-                    cut a bitch
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
                   </p>
                 </div>
               </div>
@@ -103,8 +109,9 @@ class Home extends Component {
                   <i className="fas fa-video fa-3x" />
                   <h4>pre production</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
-                    cut a bitch
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
                   </p>
                 </div>
               </div>
@@ -113,8 +120,9 @@ class Home extends Component {
                   <i className="fas fa-desktop fa-3x" />
                   <h4>pre production</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
-                    cut a bitch
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
                   </p>
                 </div>
               </div>
@@ -126,42 +134,43 @@ class Home extends Component {
           <div className="clientListLogos">{logo}</div>
         </div>
         <div className="row testimonials">
+<<<<<<< HEAD
           <Parallax blur={4} bgImage={require("../../Assets/images/headerPhotos/mtl4.jpg")} bgImageAlt="testimonial" strength={600}>
+=======
+          <Parallax
+            blur={4}
+            bgImage={require("../../Assets/images/mtl4.jpg")}
+            bgImageAlt="testimonial"
+            strength={600}
+          >
+>>>>>>> 24243d86655d7b18d5f8212ba70d9af4e469c97f
             <h1>Testimonials</h1>
             <Slider {...sliderSettings}>{testimonials}</Slider>
           </Parallax>
         </div>
-        <div className="row clientList">
+        <div className="row callToAction">
           <h1>Call to action</h1>
           <div className="container-fluid">
             <div className="row">
-              <div className="col-sm-4">
+              <div className="col-sm-6">
                 <div className=" box">
                   <i className="fas fa-chart-line fa-3x" />
                   <h4>increase revenue</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
-                    cut a bitch
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
                   </p>
                 </div>
               </div>
-              <div className="col-sm-4">
-                <div className=" box">
-                  <i className="far fa-clock fa-3x" />
-                  <h4>time efficient</h4>
-                  <p>
-                    I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
-                    cut a bitch
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-4">
+              <div className="col-sm-6">
                 <div className=" box">
                   <i className="far fa-smile-wink fa-3x" />
                   <h4>be happy</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
-                    cut a bitch
+                    I am too busy trying to make shit pretty to even come up
+                    with decent placeholder text. Someone better help me with
+                    part or imma cut a bitch
                   </p>
                 </div>
               </div>
