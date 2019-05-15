@@ -28,27 +28,22 @@ class Portfolio extends Component {
   }
   render() {
     let videos = [
-      { name: "Siamak Demo Reel", category: "corporate", videoID: "6WYJMBE-Rr0" },
-      { name: "anticipation", category: "corporate", videoID: "-PKksZtYXGA" },
+      { name: "Siamak Demo Reel", category: "music", videoID: "6WYJMBE-Rr0" },
+      { name: "anticipation", category: "commercial", videoID: "-PKksZtYXGA" },
       { name: "this is a really long title", category: "corporate", videoID: "SZq4HRF1ErE" },
       { name: "The horror experience", category: "corporate", videoID: "6WYJMBE-Rr0" },
       { name: "ShuttleControl", category: "corporate", videoID: "6WYJMBE-Rr0" },
-      { name: "This is an insanely long title.", category: "films", videoID: "6WYJMBE-Rr0" },
-      { name: "Siamak Demo Reel", category: "films", videoID: "6WYJMBE-Rr0" },
-      { name: "Siamak Demo Reel", category: "films", videoID: "6WYJMBE-Rr0" },
-      { name: "Siamak Demo Reel", category: "films", videoID: "6WYJMBE-Rr0" },
-      { name: "Siamak Demo Reel", category: "music", videoID: "6WYJMBE-Rr0" },
-      { name: "Siamak Demo Reel", category: "music", videoID: "6WYJMBE-Rr0" },
-      { name: "Siamak Demo Reel", category: "demo", videoID: "6WYJMBE-Rr0" }
+      { name: "This is an insanely long title.", category: "fiction", videoID: "6WYJMBE-Rr0" },
+      { name: "This is an insanely long title.", category: "fiction", videoID: "6WYJMBE-Rr0" }
     ];
     let filteredVideos;
     if (this.state.activeIndex === 1) {
       filteredVideos = videos.filter(function(videos) {
-        return videos.category === "demo";
+        return videos.category === "music";
       });
     } else if (this.state.activeIndex === 2) {
       filteredVideos = videos.filter(function(videos) {
-        return videos.category === "films";
+        return videos.category === "commercial";
       });
     } else if (this.state.activeIndex === 3) {
       filteredVideos = videos.filter(function(videos) {
@@ -56,7 +51,7 @@ class Portfolio extends Component {
       });
     } else if (this.state.activeIndex === 4) {
       filteredVideos = videos.filter(function(videos) {
-        return videos.category === "music";
+        return videos.category === "fiction";
       });
     } else {
       filteredVideos = videos;
@@ -72,16 +67,16 @@ class Portfolio extends Component {
       <div className="portfolio">
         <ul>
           <li className={this.state.activeIndex === 1 ? "active" : null} onClick={this.toggleClass.bind(this, 1)}>
-            Demo-Reels
+            Music Videos
           </li>
           <li className={this.state.activeIndex === 2 ? "active" : null} onClick={this.toggleClass.bind(this, 2)}>
-            Films
+            Commercial
           </li>
           <li className={this.state.activeIndex === 3 ? "active" : null} onClick={this.toggleClass.bind(this, 3)}>
             Corporate
           </li>
           <li className={this.state.activeIndex === 4 ? "active" : null} onClick={this.toggleClass.bind(this, 4)}>
-            Music
+            Fiction
           </li>
           <li className={this.state.activeIndex === 0 ? "active" : null} onClick={this.toggleClass.bind(this, 0)} data-filter="*">
             All

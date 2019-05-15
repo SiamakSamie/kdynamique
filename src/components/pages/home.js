@@ -5,16 +5,16 @@ import Slider from "react-slick";
 class Home extends Component {
   render() {
     let logos = [
-      { label: "Guru", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") },
-      { label: "kdy", src: require("../../Assets/images/guru.png") }
+      { label: "Guru", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") },
+      { label: "kdy", src: require("../../Assets/images/clientLogos/guru.png") }
     ];
     let logo = logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.label} />);
 
@@ -126,7 +126,7 @@ class Home extends Component {
           <div className="clientListLogos">{logo}</div>
         </div>
         <div className="row testimonials">
-          <Parallax blur={4} bgImage={require("../../Assets/images/mtl4.jpg")} bgImageAlt="testimonial" strength={600}>
+          <Parallax blur={4} bgImage={require("../../Assets/images/headerPhotos/mtl4.jpg")} bgImageAlt="testimonial" strength={600}>
             <h1>Testimonials</h1>
             <Slider {...sliderSettings}>{testimonials}</Slider>
           </Parallax>
