@@ -50,21 +50,16 @@ class Navbar extends Component {
     return (
       <div>
         <nav className={this.state.isTop ? "menu" : "menu menuBackground"}>
-          <img
-            className={this.state.isTop ? " hideNavLogo" : ""}
-            src={require("../Assets/images/logoWhiteSmall.png")}
-            alt="KDY"
-          />
+          <NavLink exact={true} to="/">
+            <img className={this.state.isTop ? " hideNavLogo" : ""} src={require("../Assets/images/logoWhiteSmall.png")} alt="KDY" />
+          </NavLink>
           <ul className="camera">{linksMarkup}</ul>
         </nav>
 
         <div className={"bm-burger-menu"}>
           <img src={require("../Assets/images/logoWhiteSmall.png")} alt="KDY" />
         </div>
-        <Menu
-          className="bm-burger-button "
-          isOpen={this.state.menuOpen}
-          onStateChange={state => this.handleStateChange(state)}>
+        <Menu className="bm-burger-button " isOpen={this.state.menuOpen} onStateChange={state => this.handleStateChange(state)}>
           <div className="bm-header">
             <img src={require("../Assets/images/logoWhiteSmall.png")} alt="KDY" />
           </div>

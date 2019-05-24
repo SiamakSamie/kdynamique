@@ -80,10 +80,10 @@ class Home extends Component {
           </div>
         </div>
         <div className="row homeStatement">
-          <h2>Montreal Video Production Team</h2>
+          <h2>Montreal-Toronto Production Team</h2>
           <h3>
-            Bruh, do you want to be super cool? Well let me tell you, the super coolest thing you can do is throw money in my face to make you a dope
-            videop. pls n thankst
+            Welcome to kdy productions. We're here to put your vision on video. We have an experienced team that take pride in what we do. From script
+            writing to the final touches, we put care in every step of the production process.
           </h3>
           <hr />
           <div className="container-fluid">
@@ -91,7 +91,7 @@ class Home extends Component {
               <div className="col-sm-4">
                 <div className=" box">
                   <i className="fas fa-pencil-alt fa-3x" />
-                  <h4>pre production</h4>
+                  <h4>Video Production</h4>
                   <p>
                     I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
                     cut a bitch
@@ -101,7 +101,7 @@ class Home extends Component {
               <div className="col-sm-4">
                 <div className=" box">
                   <i className="fas fa-video fa-3x" />
-                  <h4>pre production</h4>
+                  <h4>Content Development</h4>
                   <p>
                     I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
                     cut a bitch
@@ -111,7 +111,7 @@ class Home extends Component {
               <div className="col-sm-4">
                 <div className=" box">
                   <i className="fas fa-desktop fa-3x" />
-                  <h4>pre production</h4>
+                  <h4>Live Events</h4>
                   <p>
                     I am too busy trying to make shit pretty to even come up with decent placeholder text. Someone better help me with part or imma
                     cut a bitch

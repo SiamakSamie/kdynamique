@@ -34,8 +34,8 @@ class Portfolio extends Component {
       { name: "this is a really long title", category: "corporate", videoID: "SZq4HRF1ErE" },
       { name: "The horror experience", category: "corporate", videoID: "6WYJMBE-Rr0" },
       { name: "ShuttleControl", category: "corporate", videoID: "6WYJMBE-Rr0" },
-      { name: "This is an insanely long title.", category: "fiction", videoID: "6WYJMBE-Rr0" },
-      { name: "This is an insanely long title.", category: "fiction", videoID: "6WYJMBE-Rr0" }
+      { name: "This is an insanely long title.", category: "creative", videoID: "6WYJMBE-Rr0" },
+      { name: "This is an insanely long title.", category: "creative", videoID: "6WYJMBE-Rr0" }
     ];
     let filteredVideos;
     if (this.state.activeIndex === 1) {
@@ -52,7 +52,7 @@ class Portfolio extends Component {
       });
     } else if (this.state.activeIndex === 4) {
       filteredVideos = videos.filter(function(videos) {
-        return videos.category === "fiction";
+        return videos.category === "creative";
       });
     } else {
       filteredVideos = videos;
@@ -77,7 +77,7 @@ class Portfolio extends Component {
             Corporate
           </li>
           <li className={this.state.activeIndex === 4 ? "active" : null} onClick={this.toggleClass.bind(this, 4)}>
-            Fiction
+            Creative
           </li>
           <li className={this.state.activeIndex === 0 ? "active" : null} onClick={this.toggleClass.bind(this, 0)} data-filter="*">
             All

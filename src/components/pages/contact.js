@@ -74,7 +74,7 @@ class Contact extends Component {
             <div className="panel-title text-center">For a quick reply, give us a call</div>
           </div>
           <div className="panel-body text-center">
-            <h1>(514) 559-0578</h1>
+            <h1>(438) 998-0466</h1>
           </div>
         </div>
 
