@@ -7,22 +7,49 @@ class Header extends Component {
   parallaxImage(param) {
     switch (param) {
       case "/":
-        return [require("../Assets/images/headerPhotos/mtl.png"), "", "", ""];
+        return [require("../Assets/images/headerPhotos/home.JPG"), "", "", ""];
       case "/services":
-        return [require("../Assets/images/headerPhotos/mtl.png"), "Services", ".", "Different projects require different services"];
+        return [
+          require("../Assets/images/headerPhotos/services.jpg"),
+          "Services",
+          ".",
+          "Different projects require different services"
+        ];
       case "/portfolio":
-        return [require("../Assets/images/headerPhotos/mtl4.jpg"), "Portfolio", ".", "Let our work speak for itself"];
+        return [
+          require("../Assets/images/headerPhotos/mtl4.jpg"),
+          "Portfolio",
+          ".",
+          "Let our work speak for itself"
+        ];
       case "/about":
-        return [require("../Assets/images/headerPhotos/mtl.png"), "Our Team", ".", "Take a look at the team"];
+        return [
+          require("../Assets/images/headerPhotos/about.jpg"),
+          "About Us",
+          ".",
+          "Take a look at the team"
+        ];
       case "/contact":
-        return [require("../Assets/images/headerPhotos/contactUs.jpg"), "Contact Us", ".", "We're ready, give us a call"];
+        return [
+          require("../Assets/images/headerPhotos/contactUs.jpg"),
+          "Contact Us",
+          ".",
+          "We're ready, give us a call"
+        ];
       default:
-        return [require("../Assets/images/headerPhotos/mtl4.jpg"), "404 Page Not Found", ".", "hmm this page doesnt exist"];
+        return [
+          require("../Assets/images/headerPhotos/mtl4.jpg"),
+          "404 Page Not Found",
+          ".",
+          "hmm this page doesnt exist"
+        ];
     }
   }
   // className="container homeHeaderContent"
   homeHeaderContent(param) {
-    return param === "/" ? { className: " container homeHeaderContent" } : { className: "hidden" };
+    return param === "/"
+      ? { className: " container homeHeaderContent" }
+      : { className: "hidden" };
   }
 
   render() {
@@ -32,11 +59,16 @@ class Header extends Component {
         blur={{ min: -9, max: 15 }}
         bgImage={this.parallaxImage(this.props.location.pathname)[0]}
         bgImageAlt="Parallax Background Image"
-        strength={400}>
+        strength={400}
+      >
         <div {...this.homeHeaderContent(this.props.location.pathname)}>
           <div className="row ">
             <div className="col-xs-12">
-              <img className="logo" src={require("../Assets/images/logoWhite.png")} alt="KDY" />
+              <img
+                className="logo"
+                src={require("../Assets/images/logoWhite.png")}
+                alt="KDY"
+              />
             </div>
             <div className="col-xs-12">
               <a href="tel:1-438-998-0466">

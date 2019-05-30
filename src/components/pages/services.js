@@ -48,7 +48,7 @@ class Services extends Component {
     ];
 
     let service = services.map((object, i) => (
-      <div className="col-sm-4">
+      <div key={i} className="col-sm-4">
         <div className=" box">
           <i className={object.logo} />
           <h4>{object.title}</h4>

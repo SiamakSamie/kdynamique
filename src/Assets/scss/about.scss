@@ -59,7 +59,7 @@
 
 // Below is all for the cards
 
-figure.snip0051 {
+figure.aboutUsMemberContainer {
   font-family: "Raleway", Arial, sans-serif;
   position: relative;
   display: inline-block;
@@ -74,11 +74,11 @@ figure.snip0051 {
   -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
 }
-figure.snip0051 * {
+figure.aboutUsMemberContainer * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-figure.snip0051 > img {
+figure.aboutUsMemberContainer > img {
   margin-left: 50%;
   opacity: 1;
   width: 50%;
@@ -86,7 +86,7 @@ figure.snip0051 > img {
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
-figure.snip0051 figcaption {
+figure.aboutUsMemberContainer figcaption {
   left: 0;
   position: absolute;
   top: 0;
@@ -94,8 +94,8 @@ figure.snip0051 figcaption {
   height: 100%;
   background: #ffffff;
 }
-figure.snip0051 figcaption h2,
-figure.snip0051 figcaption p {
+figure.aboutUsMemberContainer figcaption h2,
+figure.aboutUsMemberContainer figcaption p {
   margin: 0;
   color: #000000;
   text-align: right;
@@ -103,7 +103,7 @@ figure.snip0051 figcaption p {
   padding: 10px 0 10px 0px;
   margin: 0 40px 0 20px;
 }
-figure.snip0051 figcaption h2 {
+figure.aboutUsMemberContainer figcaption h2 {
   font-size: 1.3em;
   bottom: 50%;
   right: 0;
@@ -115,10 +115,10 @@ figure.snip0051 figcaption h2 {
     font-size: 1em;
   }
 }
-figure.snip0051 figcaption h2 span {
+figure.aboutUsMemberContainer figcaption h2 span {
   font-weight: 800;
 }
-figure.snip0051 figcaption p {
+figure.aboutUsMemberContainer figcaption p {
   top: 50%;
   font-size: 0.9em;
   opacity: 0.8;
@@ -127,7 +127,7 @@ figure.snip0051 figcaption p {
   }
 }
 
-figure.snip0051:after {
+figure.aboutUsMemberContainer:after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -140,8 +140,8 @@ figure.snip0051:after {
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
 }
-figure.snip0051:hover > img,
-figure.snip0051.hover > img {
+figure.aboutUsMemberContainer:hover > img,
+figure.aboutUsMemberContainer.hover > img {
   opacity: 0.8;
   filter: blur(2px);
   -webkit-transform: scale(1.1);

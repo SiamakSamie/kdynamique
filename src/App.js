@@ -31,7 +31,7 @@ class App extends Component {
       { label: "Home", link: "/" },
       { label: "Services", link: "/services" },
       { label: "Portfolio", link: "/portfolio" },
-      { label: "Our Team", link: "/about" },
+      { label: "About Us", link: "/about" },
       { label: "Contact Us", link: "/contact" }
     ];
 
@@ -68,7 +68,11 @@ class App extends Component {
 
             <div id="fb-root" />
 
-            <div class="fb-customerchat" attribution="setup_tool" page_id="156784661430604" />
+            <div
+              className="fb-customerchat"
+              attribution="setup_tool"
+              page_id="156784661430604"
+            />
           </div>
         </ScrollToTop>
       </Router>

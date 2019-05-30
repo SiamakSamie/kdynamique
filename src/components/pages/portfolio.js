@@ -12,7 +12,7 @@ class Portfolio extends Component {
     super(props);
 
     this.state = {
-      activeIndex: 1,
+      activeIndex: "all",
       isOpen: false,
       videoID: "SZq4HRF1ErE"
     };
@@ -21,65 +21,150 @@ class Portfolio extends Component {
     this.openModal = this.openModal.bind(this);
   }
 
-  toggleClass(index, e) {
-    this.setState({ activeIndex: index });
+  componentDidMount() {
+    const search = this.props.location.search;
+    const params = new URLSearchParams(search);
+    const index = params.get("index");
+
+    if (index != null) {
+      this.setState({ activeIndex: index });
+    }
   }
-  openModal(videoID, e) {
+
+  updateUrl = index => {
+    this.props.history.push({
+      search: "?index=" + index
+    });
+  };
+
+  toggleClass(index) {
+    this.setState({ activeIndex: index });
+    this.updateUrl(index);
+  }
+  openModal(videoID) {
     this.setState({ isOpen: true, videoID: videoID });
   }
+
   render() {
-    let videos = [
-      { name: "Siamak Demo Reel", category: "music", videoID: "6WYJMBE-Rr0" },
-      { name: "anticipation", category: "commercial", videoID: "-PKksZtYXGA" },
-      { name: "this is a really long title", category: "corporate", videoID: "SZq4HRF1ErE" },
-      { name: "The horror experience", category: "corporate", videoID: "6WYJMBE-Rr0" },
-      { name: "ShuttleControl", category: "corporate", videoID: "6WYJMBE-Rr0" },
-      { name: "This is an insanely long title.", category: "creative", videoID: "6WYJMBE-Rr0" },
-      { name: "This is an insanely long title.", category: "creative", videoID: "6WYJMBE-Rr0" }
+    let media = [
+      //music
+      { name: "So Alive", category: "music", videoID: "Bu9gl10AkzQ" },
+      { name: "See You", category: "music", videoID: "WrTdEeSEK2c" },
+      {
+        name: "Best I'll Never Have",
+        category: "music",
+        videoID: "_VRsdKhnLbY"
+      },
+      { name: "Strangers", category: "music", videoID: "kQqClLNm2iY" },
+      //commercial
+      {
+        name: "Guru Lite Launch",
+        category: "commercial",
+        videoID: "Z-TMSzIPWJg"
+      },
+      {
+        name: "Guru Summer Medley",
+        category: "commercial",
+        videoID: "NXGVNPOBkRU"
+      },
+      {
+        name: "Combat D'archers Laval",
+        category: "commercial",
+        videoID: "X_mk-c-12dw"
+      },
+      {
+        name: "Combat Nerf Montreal",
+        category: "commercial",
+        videoID: "5eJ_Bph06L4"
+      },
+      //corporate
+      { name: "One Jamat", category: "corporate", videoID: "lkdzdMx0jbk" },
+      {
+        name: "Combat D'archers Outdoor",
+        category: "corporate",
+        videoID: "AqSQg4WcvFQ"
+      },
+      {
+        name: "Ambition Boxing Gala",
+        category: "corporate",
+        videoID: "quI6cYQHPDM"
+      },
+      //creative
+      {
+        name: "G1nman Kill (Previsual)",
+        category: "creative",
+        videoID: "bCUn8C_Hqwo"
+      },
+      { name: "Anticipation", category: "creative", videoID: "-PKksZtYXGA" },
+      { name: "Fireworks", category: "creative", videoID: "oWzIUU-ystE" },
+      { name: "New Years", category: "creative", videoID: "p2q536qJ898" }
     ];
-    let filteredVideos;
-    if (this.state.activeIndex === 1) {
-      filteredVideos = videos.filter(function(videos) {
-        return videos.category === "music";
+    let filteredMedia;
+    if (this.state.activeIndex === "music") {
+      filteredMedia = media.filter(function(media) {
+        return media.category === "music";
       });
-    } else if (this.state.activeIndex === 2) {
-      filteredVideos = videos.filter(function(videos) {
-        return videos.category === "commercial";
+    } else if (this.state.activeIndex === "commercial") {
+      filteredMedia = media.filter(function(media) {
+        return media.category === "commercial";
       });
-    } else if (this.state.activeIndex === 3) {
-      filteredVideos = videos.filter(function(videos) {
-        return videos.category === "corporate";
+    } else if (this.state.activeIndex === "corporate") {
+      filteredMedia = media.filter(function(media) {
+        return media.category === "corporate";
       });
-    } else if (this.state.activeIndex === 4) {
-      filteredVideos = videos.filter(function(videos) {
-        return videos.category === "creative";
+    } else if (this.state.activeIndex === "creative") {
+      filteredMedia = media.filter(function(media) {
+        return media.category === "creative";
       });
     } else {
-      filteredVideos = videos;
+      filteredMedia = media;
     }
-    let video = filteredVideos.map((object, i) => (
+
+    let video = filteredMedia.map((object, i) => (
       <div key={i} className="videoImg">
         <div className="imgText">{object.name}</div>
-        <img src={"https://img.youtube.com/vi/" + object.videoID + "/0.jpg"} onClick={this.openModal.bind(this, object.videoID)} alt={object.name} />
+        <img
+          src={"https://img.youtube.com/vi/" + object.videoID + "/0.jpg"}
+          onClick={this.openModal.bind(this, object.videoID)}
+          alt={object.name}
+        />
       </div>
     ));
 
     return (
       <div className="portfolio">
         <ul>
-          <li className={this.state.activeIndex === 1 ? "active" : null} onClick={this.toggleClass.bind(this, 1)}>
+          <li
+            className={this.state.activeIndex === "music" ? "active" : null}
+            onClick={this.toggleClass.bind(this, "music")}
+          >
             Music Videos
           </li>
-          <li className={this.state.activeIndex === 2 ? "active" : null} onClick={this.toggleClass.bind(this, 2)}>
+          <li
+            className={
+              this.state.activeIndex === "commercial" ? "active" : null
+            }
+            onClick={this.toggleClass.bind(this, "commercial")}
+          >
             Commercial
           </li>
-          <li className={this.state.activeIndex === 3 ? "active" : null} onClick={this.toggleClass.bind(this, 3)}>
+          <li
+            className={this.state.activeIndex === "corporate" ? "active" : null}
+            onClick={this.toggleClass.bind(this, "corporate")}
+          >
             Corporate
           </li>
-          <li className={this.state.activeIndex === 4 ? "active" : null} onClick={this.toggleClass.bind(this, 4)}>
+          <li
+            className={this.state.activeIndex === "creative" ? "active" : null}
+            onClick={this.toggleClass.bind(this, "creative")}
+          >
             Creative
           </li>
-          <li className={this.state.activeIndex === 0 ? "active" : null} onClick={this.toggleClass.bind(this, 0)} data-filter="*">
+          <li
+            className={this.state.activeIndex === "all" ? "active" : null}
+            onClick={this.toggleClass.bind(this, "all")}
+            data-filter="*"
+          >
             All
           </li>
         </ul>
@@ -88,7 +173,12 @@ class Portfolio extends Component {
             {video}
           </Masonry>
         </div>
-        <ModalVideo channel="youtube" isOpen={this.state.isOpen} videoId={this.state.videoID} onClose={() => this.setState({ isOpen: false })} />
+        <ModalVideo
+          channel="youtube"
+          isOpen={this.state.isOpen}
+          videoId={this.state.videoID}
+          onClose={() => this.setState({ isOpen: false })}
+        />
       </div>
     );
   }
