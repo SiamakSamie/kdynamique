@@ -11,7 +11,8 @@ class Contact extends Component {
       phone: "",
       message: "",
       emailHeader: "Sorry!",
-      emailBody: "There was a problem. Email us directly at info@kdypro.com or give us a call!",
+      emailBody:
+        "There was a problem. Email us directly at info@kdypro.com or give us a call!",
       visible: false
     };
   }
@@ -42,7 +43,12 @@ class Contact extends Component {
     const { message, phone, email, name } = this.state;
 
     axios
-      .post("https://www.enformed.io/ghnyxjd4/", { message, phone, email, name })
+      .post("https://www.enformed.io/ghnyxjd4/", {
+        message,
+        phone,
+        email,
+        name
+      })
       .then(response => {
         console.log(response);
         this.emailResponse("Email sent!", "We will get back to you shortly");
@@ -51,7 +57,10 @@ class Contact extends Component {
       })
       .catch(error => {
         console.log(error);
-        this.emailResponse("There was a problem!", "Email directly at info@kdypro.com or give us a call!");
+        this.emailResponse(
+          "There was a problem!",
+          "Email directly at info@kdypro.com or give us a call!"
+        );
         this.resetForm();
         this.openModal();
       });
@@ -71,16 +80,22 @@ class Contact extends Component {
       <div className="container-fluid phone">
         <div className="panel panel-phone">
           <div className="panel-heading">
-            <div className="panel-title text-center">For a quick reply, give us a call</div>
+            <div className="panel-title text-center">
+              For a quick reply, give us a call
+            </div>
           </div>
           <div className="panel-body text-center">
             <h1>(438) 998-0466</h1>
           </div>
         </div>
 
-        <form className="form-horizontal" id="contact_form" onSubmit={this.onSubmit}>
+        <form
+          className="form-horizontal"
+          id="contact_form"
+          onSubmit={this.onSubmit}
+        >
           <fieldset>
-            <legend>Something something something yay</legend>
+            <legend>email: info@kdypro.com</legend>
             <div className="form-group">
               <div className="col-md-12 inputGroupContainer">
                 <div className="input-group">
@@ -179,11 +194,20 @@ class Contact extends Component {
             </div>
           </fieldset>
         </form>
-        <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+        <Modal
+          visible={this.state.visible}
+          width="400"
+          height="300"
+          effect="fadeInUp"
+          onClickAway={() => this.closeModal()}
+        >
           <div>
             <h2 className="emailHeader">{this.state.emailHeader}</h2>
             <h3 className="emailBody">{this.state.emailBody}</h3>
-            <button className="btn btn-primary emailModalButton" onClick={() => this.closeModal()}>
+            <button
+              className="btn btn-primary emailModalButton"
+              onClick={() => this.closeModal()}
+            >
               close
             </button>
           </div>

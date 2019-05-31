@@ -174,7 +174,7 @@ class Home extends Component {
         <div className="row testimonials">
           <Parallax
             blur={4}
-            bgImage={require("../../Assets/images/headerPhotos/mtl4.jpg")}
+            bgImage={require("../../Assets/images/headerPhotos/home.JPG")}
             bgImageAlt="testimonial"
             strength={600}
           >

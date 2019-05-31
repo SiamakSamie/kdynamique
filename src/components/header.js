@@ -17,7 +17,7 @@ class Header extends Component {
         ];
       case "/portfolio":
         return [
-          require("../Assets/images/headerPhotos/mtl4.jpg"),
+          require("../Assets/images/headerPhotos/portfolio.jpg"),
           "Portfolio",
           ".",
           "Let our work speak for itself"
@@ -38,7 +38,7 @@ class Header extends Component {
         ];
       default:
         return [
-          require("../Assets/images/headerPhotos/mtl4.jpg"),
+          require("../Assets/images/headerPhotos/home.JPG"),
           "404 Page Not Found",
           ".",
           "hmm this page doesnt exist"
