@@ -6,7 +6,7 @@ class Services extends Component {
       {
         title: "Video Production",
         logo: "fas fa-video fa-3x",
-        description: "You will receive amazing video captured by our talented crew using our proffesional gear."
+        description: "You will receive amazing video captured by our talented crew using our professional gear."
       },
       {
         title: "Content Development",
@@ -21,7 +21,7 @@ class Services extends Component {
       {
         title: "Photography",
         logo: "fas fa-camera fa-3x",
-        description: "3,2,1 SMILE! Handling you photography needs from product, lifestyle, studio, weddings and more."
+        description: "3,2,1 SMILE! Handling your photography needs from product, lifestyle, studio, weddings and more."
       },
       {
         title: "Editing",
