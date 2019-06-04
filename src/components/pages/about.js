@@ -34,35 +34,32 @@ class About extends Component {
       {
         firstName: "Malik",
         lastName: "Bouabid",
-        description:
-          "Co-Founder and Some punk who thinks that kdy can be successful lol",
+        description: "Co-founder, director of operations, and production manager.",
         descriptionLong:
-          "Malik is the kinf of guy that will be like... 'Yo i did the math' and then say something as if it'll actually be profitable but he sucks at math so it never is.",
+          "I have an eye for moving images and a love for capturing their moments. My team is my strength. Watermelon is my favorite fruit.",
         image: require("../../Assets/images/teamPhotos/malik.png")
       },
       {
         firstName: "Siamak",
         lastName: "Samie",
-        description: "Co-Founder and is a very sexy man with beautiful hair",
-        descriptionLong:
-          "Siamak spend 90% of the time staring into a mirror and telling himself he is the prettiest stuntman of them all. ",
+        description: "Co-founder, producer, and creative director",
+        descriptionLong: "I need want everything I produce to be beautiful and magical. My team hasn't let me down so far. ",
         image: require("../../Assets/images/teamPhotos/siamak.png")
       },
       {
         firstName: "Frank",
         lastName: "Hatchetnov",
-        description:
-          "Stunt Grip and a silly slav boi. has the weirdest beard in town",
+        description: "Co-founder, business unit manager, and on set teachnician",
         descriptionLong:
-          "Dis boi is a crazy boi. One day he'll be an actra stuntman... maybe in his fourties. He'll never give up tho",
+          "My background in software engineering allows me to create project worflows and organise productions. I implement new technologies that helps businesses.",
         image: require("../../Assets/images/teamPhotos/frank.jpg")
       },
       {
         firstName: "Andy",
         lastName: "Le",
-        description: "Our talented audio engineer",
+        description: "Audio specialist and associate producer.",
         descriptionLong:
-          "Andy studies audio engineering at Concordia University. He has Blah blah blah composition n sound design",
+          "I have a bachelor's in Electro Acoustic studies from Concordia and several years of experience in audio production. I will make you sound beautiful.",
         image: require("../../Assets/images/teamPhotos/andy.jpg")
       }
     ];
@@ -71,14 +68,7 @@ class About extends Component {
       <figure
         key={i}
         className="aboutUsMemberContainer"
-        onClick={this.openModal.bind(
-          this,
-          object.image,
-          object.descriptionLong,
-          object.firstName,
-          object.lastName
-        )}
-      >
+        onClick={this.openModal.bind(this, object.image, object.descriptionLong, object.firstName, object.lastName)}>
         <img src={object.image} alt="Headshot" />
         <figcaption>
           <h2>
@@ -93,34 +83,19 @@ class About extends Component {
       <div className="container-fluid about">
         <h2>Our mission</h2>
         <p>
-          Kdy productions was initially created for to make highly creative,
-          intensive, and dynamic action videos. Throughout the years, we've
-          evolved and now offer a multitude of services. From corporate videos,
-          to feature films, we've got the right people and the right attitude.
+          Kdy productions was initially created to make highly creative, intensive, and dynamic action videos. Throughout the years, we've evolved and
+          now offer a multitude of services. From corporate videos, to feature films, we've got the right people and the right attitude.
         </p>
         <hr />
         {member}
-        <Modal
-          visible={this.state.visible}
-          width="400"
-          height="340"
-          effect="fadeInUp"
-          onClickAway={() => this.closeModal()}
-        >
+        <Modal visible={this.state.visible} width="400" height="340" effect="fadeInUp" onClickAway={() => this.closeModal()}>
           <div>
             <h2 className="aboutUsHeader">
               {this.state.modalFirstName} {this.state.modalLastName}
             </h2>
-            <img
-              className="aboutUsPhoto"
-              src={this.state.modalPhoto}
-              alt="KDY"
-            />
+            <img className="aboutUsPhoto" src={this.state.modalPhoto} alt="KDY" />
             <h3 className="aboutUsBody">{this.state.modalBody}</h3>
-            <button
-              className="btn btn-primary aboutUsModalButton"
-              onClick={() => this.closeModal()}
-            >
+            <button className="btn btn-primary aboutUsModalButton" onClick={() => this.closeModal()}>
               close
             </button>
           </div>

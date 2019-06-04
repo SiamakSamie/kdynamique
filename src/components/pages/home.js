@@ -46,34 +46,28 @@ class Home extends Component {
         src: require("../../Assets/images/clientLogos/beauteselect.png")
       }
     ];
-    let logo = logos.map((logo, i) => (
-      <img key={i} src={logo.src} alt={logo.label} />
-    ));
+    let logo = logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.label} />);
 
     let testimonial = [
       {
         name: "Julian Crasci",
         label: "Digital Marketing Director, Guru Energy",
-        text:
-          "Great job on the videos! The team really likes them and it made everyone smile to watch them"
+        text: "Great job on the videos! The team really likes them. It made everyone in the office smile!"
       },
       {
-        name: "Oliver",
+        name: "Oliver-Scott Ulysse",
         label: "CEO, Combat D'archers",
-        text:
-          "My clients love watching the videos playing at our center that they filmed. It gets them excited to play. "
+        text: "My clients love watching the videos produced by KDY. We have them playing at our center. It gets everyone excited to play. "
       },
       {
         name: "Edward Maxedon",
         label: "CEO, ShuttleControl",
-        text:
-          "Our expectactions were far exceeded. Working with the KDY team was an extraordinary experience. Go KDY!"
+        text: "Our expectactions were far exceeded. Working with the KDY team was an extraordinary experience. Go KDY!"
       },
       {
         name: "Jose Garcia",
         label: "Restaurant, Arriba Burito",
-        text:
-          "We love the videos and so do our clients. I highly recomend kdy productions to other restaurants that want to grow their business"
+        text: "We love the videos and so do our clients. I highly recomend kdy productions to other restaurants that want to grow their business!"
       }
     ];
     let testimonials = testimonial.map((testimonial, i) => (
@@ -123,10 +117,8 @@ class Home extends Component {
         <div className="row homeStatement">
           <h2>Montreal-Toronto Production Team</h2>
           <h3>
-            Welcome to kdy productions. We're here to put your vision on video.
-            We've got an experienced team that take pride in what we do. From
-            script writing to the final touches, we put care in every step of
-            the production process.
+            Welcome to kdy productions. We're here to put your vision on video. We've got an experienced team that take pride in what we do. From
+            script writing to the final touches, we put care in every step of the production process.
           </h3>
           <hr />
           <div className="container-fluid">
@@ -134,33 +126,30 @@ class Home extends Component {
               <div className="col-sm-4">
                 <div className=" box">
                   <i className="fas fa-pencil-alt fa-3x" />
-                  <h4>Pre Production</h4>
+                  <h4>Creativity</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
+                    We're always thinking of new ways to spice up the content we create. We use new cinematic techniques and creative concepts to
+                    capture the viewer's attention.
                   </p>
                 </div>
               </div>
               <div className="col-sm-4">
                 <div className=" box">
-                  <i className="fas fa-video fa-3x" />
-                  <h4>Production</h4>
+                  <i className="fas fa-hands-helping fa-3x" />
+                  <h4>Teamwork</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
+                    Producing quality content needs a team with unique skills. It also depends on YOU! We'll work together closely to make your vision
+                    come to life!
                   </p>
                 </div>
               </div>
               <div className="col-sm-4">
                 <div className=" box">
-                  <i className="fas fa-desktop fa-3x" />
-                  <h4>Post Prodcution</h4>
+                  <i className="fas fa-business-time fa-3x" />
+                  <h4>Professionalism</h4>
                   <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
+                    We ensure that every process is held to the highest quality. We want the final product to be amazing but we also want the process
+                    to get there to be a great experience.
                   </p>
                 </div>
               </div>
@@ -172,44 +161,13 @@ class Home extends Component {
           <div className="clientListLogos">{logo}</div>
         </div>
         <div className="row testimonials">
-          <Parallax
-            blur={4}
-            bgImage={require("../../Assets/images/headerPhotos/home.JPG")}
-            bgImageAlt="testimonial"
-            strength={600}
-          >
+          <Parallax blur={4} bgImage={require("../../Assets/images/headerPhotos/home.JPG")} bgImageAlt="testimonial" strength={600}>
             <h1>Testimonials</h1>
             <Slider {...sliderSettings}>{testimonials}</Slider>
           </Parallax>
         </div>
         <div className="row callToAction">
-          <h1>Call to action</h1>
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-sm-6">
-                <div className=" box">
-                  <i className="fas fa-chart-line fa-3x" />
-                  <h4>increase revenue</h4>
-                  <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <div className=" box">
-                  <i className="far fa-smile-wink fa-3x" />
-                  <h4>be happy</h4>
-                  <p>
-                    I am too busy trying to make shit pretty to even come up
-                    with decent placeholder text. Someone better help me with
-                    part or imma cut a bitch
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img src={require("../../Assets/images/logoCallToAction.png")} alt="KDY" className="responsive" />
         </div>
       </div>
     );

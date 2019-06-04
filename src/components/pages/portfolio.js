@@ -70,7 +70,7 @@ class Portfolio extends Component {
       {
         name: "Combat D'archers Laval",
         category: "commercial",
-        videoID: "X_mk-c-12dw"
+        videoID: "-Azkckxeb_g"
       },
       {
         name: "Combat Nerf Montreal",
@@ -78,17 +78,19 @@ class Portfolio extends Component {
         videoID: "5eJ_Bph06L4"
       },
       //corporate
-      { name: "One Jamat", category: "corporate", videoID: "lkdzdMx0jbk" },
+      { name: "BDP Gala", category: "corporate", videoID: "buBhwuaQ_4A" },
       {
         name: "Combat D'archers Outdoor",
         category: "corporate",
         videoID: "AqSQg4WcvFQ"
       },
+      { name: "Aki Pro", category: "corporate", videoID: "A0m6EfIpBJ0" },
       {
         name: "Ambition Boxing Gala",
         category: "corporate",
         videoID: "quI6cYQHPDM"
       },
+      { name: "One Jamat", category: "corporate", videoID: "lkdzdMx0jbk" },
       //creative
       {
         name: "G1nman Kill (Previsual)",
@@ -123,48 +125,26 @@ class Portfolio extends Component {
     let video = filteredMedia.map((object, i) => (
       <div key={i} className="videoImg">
         <div className="imgText">{object.name}</div>
-        <img
-          src={"https://img.youtube.com/vi/" + object.videoID + "/0.jpg"}
-          onClick={this.openModal.bind(this, object.videoID)}
-          alt={object.name}
-        />
+        <img src={"https://img.youtube.com/vi/" + object.videoID + "/0.jpg"} onClick={this.openModal.bind(this, object.videoID)} alt={object.name} />
       </div>
     ));
 
     return (
       <div className="portfolio">
         <ul>
-          <li
-            className={this.state.activeIndex === "music" ? "active" : null}
-            onClick={this.toggleClass.bind(this, "music")}
-          >
+          <li className={this.state.activeIndex === "music" ? "active" : null} onClick={this.toggleClass.bind(this, "music")}>
             Music Videos
           </li>
-          <li
-            className={
-              this.state.activeIndex === "commercial" ? "active" : null
-            }
-            onClick={this.toggleClass.bind(this, "commercial")}
-          >
+          <li className={this.state.activeIndex === "commercial" ? "active" : null} onClick={this.toggleClass.bind(this, "commercial")}>
             Commercial
           </li>
-          <li
-            className={this.state.activeIndex === "corporate" ? "active" : null}
-            onClick={this.toggleClass.bind(this, "corporate")}
-          >
+          <li className={this.state.activeIndex === "corporate" ? "active" : null} onClick={this.toggleClass.bind(this, "corporate")}>
             Corporate
           </li>
-          <li
-            className={this.state.activeIndex === "creative" ? "active" : null}
-            onClick={this.toggleClass.bind(this, "creative")}
-          >
+          <li className={this.state.activeIndex === "creative" ? "active" : null} onClick={this.toggleClass.bind(this, "creative")}>
             Creative
           </li>
-          <li
-            className={this.state.activeIndex === "all" ? "active" : null}
-            onClick={this.toggleClass.bind(this, "all")}
-            data-filter="*"
-          >
+          <li className={this.state.activeIndex === "all" ? "active" : null} onClick={this.toggleClass.bind(this, "all")} data-filter="*">
             All
           </li>
         </ul>
@@ -173,12 +153,7 @@ class Portfolio extends Component {
             {video}
           </Masonry>
         </div>
-        <ModalVideo
-          channel="youtube"
-          isOpen={this.state.isOpen}
-          videoId={this.state.videoID}
-          onClose={() => this.setState({ isOpen: false })}
-        />
+        <ModalVideo channel="youtube" isOpen={this.state.isOpen} videoId={this.state.videoID} onClose={() => this.setState({ isOpen: false })} />
       </div>
     );
   }

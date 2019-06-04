@@ -11,8 +11,7 @@ class Contact extends Component {
       phone: "",
       message: "",
       emailHeader: "Sorry!",
-      emailBody:
-        "There was a problem. Email us directly at info@kdypro.com or give us a call!",
+      emailBody: "There was a problem. Email us directly at info@kdypro.com or give us a call!",
       visible: false
     };
   }
@@ -57,10 +56,7 @@ class Contact extends Component {
       })
       .catch(error => {
         console.log(error);
-        this.emailResponse(
-          "There was a problem!",
-          "Email directly at info@kdypro.com or give us a call!"
-        );
+        this.emailResponse("There was a problem!", "Email directly at info@kdypro.com or give us a call!");
         this.resetForm();
         this.openModal();
       });
@@ -80,20 +76,14 @@ class Contact extends Component {
       <div className="container-fluid phone">
         <div className="panel panel-phone">
           <div className="panel-heading">
-            <div className="panel-title text-center">
-              For a quick reply, give us a call
-            </div>
+            <div className="panel-title text-center">For a quick reply, give us a call</div>
           </div>
           <div className="panel-body text-center">
             <h1>(438) 998-0466</h1>
           </div>
         </div>
 
-        <form
-          className="form-horizontal"
-          id="contact_form"
-          onSubmit={this.onSubmit}
-        >
+        <form className="form-horizontal" id="contact_form" onSubmit={this.onSubmit}>
           <fieldset>
             <legend>email: info@kdypro.com</legend>
             <div className="form-group">
@@ -151,7 +141,7 @@ class Contact extends Component {
                   </span>
                   <input
                     name="phone"
-                    placeholder="(845) 555-1212"
+                    placeholder="(555) 555-5555"
                     className="form-control"
                     type="text"
                     onChange={this.onChange}
@@ -194,20 +184,11 @@ class Contact extends Component {
             </div>
           </fieldset>
         </form>
-        <Modal
-          visible={this.state.visible}
-          width="400"
-          height="300"
-          effect="fadeInUp"
-          onClickAway={() => this.closeModal()}
-        >
+        <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
           <div>
             <h2 className="emailHeader">{this.state.emailHeader}</h2>
             <h3 className="emailBody">{this.state.emailBody}</h3>
-            <button
-              className="btn btn-primary emailModalButton"
-              onClick={() => this.closeModal()}
-            >
+            <button className="btn btn-primary emailModalButton" onClick={() => this.closeModal()}>
               close
             </button>
           </div>

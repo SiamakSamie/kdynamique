@@ -68,11 +68,7 @@ class App extends Component {
 
             <div id="fb-root" />
 
-            <div
-              className="fb-customerchat"
-              attribution="setup_tool"
-              page_id="156784661430604"
-            />
+            <div className="fb-customerchat" attribution="setup_tool" page_id="156784661430604" />
           </div>
         </ScrollToTop>
       </Router>
