@@ -42,14 +42,14 @@ class About extends Component {
       {
         firstName: "Siamak",
         lastName: "Samie",
-        description: "Co-founder, producer, and creative director",
-        descriptionLong: "I need want everything I produce to be beautiful and magical. My team hasn't let me down so far. ",
+        description: "Co-founder, producer, and creative director.",
+        descriptionLong: "I want everything I produce to exceed expectations. My team hasn't let me down so far. ",
         image: require("../../Assets/images/teamPhotos/siamak.png")
       },
       {
         firstName: "Frank",
         lastName: "Hatchetnov",
-        description: "Co-founder, business unit manager, and on set teachnician",
+        description: "Co-founder, business unit manager, and on set teachnician.",
         descriptionLong:
           "My background in software engineering allows me to create project worflows and organise productions. I implement new technologies that helps businesses.",
         image: require("../../Assets/images/teamPhotos/frank.jpg")
