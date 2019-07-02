@@ -47,11 +47,11 @@ class About extends Component {
         image: require("../../Assets/images/teamPhotos/siamak.png")
       },
       {
-        firstName: "Frank",
-        lastName: "Hatchetnov",
-        description: "Co-founder, business unit manager, and on set teachnician.",
+        firstName: "Andrew",
+        lastName: "Hanichkovsky",
+        description: "Co-founder, production coordinator, producer.",
         descriptionLong:
-          "My background in software engineering allows me to create project worflows and organise productions. I implement new technologies that helps businesses.",
+          "I'm the guy on set that can handle any problem thrown my way. A 16 hour shoot at night in the rain? that's a walk in the park.",
         image: require("../../Assets/images/teamPhotos/frank.jpg")
       },
       {
