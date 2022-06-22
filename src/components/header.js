@@ -8,33 +8,26 @@ class Header extends Component {
     switch (param) {
       case "/":
         return [require("../Assets/images/headerPhotos/home.JPG"), "", "", ""];
-      case "/services":
-        return [
-          require("../Assets/images/headerPhotos/services.jpg"),
-          "Services",
-          ".",
-          "Different projects require different services"
-        ];
       case "/portfolio":
         return [
           require("../Assets/images/headerPhotos/portfolio.jpg"),
           "Portfolio",
           ".",
-          "Let our work speak for itself"
+          "Proudly created by us"
         ];
       case "/about":
         return [
           require("../Assets/images/headerPhotos/about.jpg"),
           "About Us",
           ".",
-          "Take a look at the team"
+          "What is kdynamique?"
         ];
       case "/contact":
         return [
           require("../Assets/images/headerPhotos/contactUs.jpg"),
           "Contact Us",
           ".",
-          "We're ready, give us a call"
+          "Happy to answer any questions!"
         ];
       default:
         return [
@@ -66,24 +59,24 @@ class Header extends Component {
             <div className="col-xs-12">
               <img
                 className="logo"
-                src={require("../Assets/images/logoWhite.png")}
+                src={require("../Assets/images/kdyLogoWhite.png")}
                 alt="KDY"
               />
             </div>
             <div className="col-xs-12">
-              <a href="tel:1-438-998-0466">
-                <button className="btn btn-primary">
-                  <span className="btn-content">(438) 998-0466</span>
+              {/*<a href="tel:1-438-998-0466">*/}
+              {/*  <button className="btn btn-primary">*/}
+              {/*    <span className="btn-content">(514) 559-0578</span>*/}
+              {/*    <span className="icon">*/}
+              {/*      <i className="fa fa-phone" aria-hidden="true" />*/}
+              {/*    </span>*/}
+              {/*  </button>*/}
+              {/*</a>*/}
+              <NavLink exact={true} to="/portfolio">
+                <button className="btn btn-danger">
+                  <span className="btn-content">click here to see our portfolio</span>
                   <span className="icon">
-                    <i className="fa fa-phone" aria-hidden="true" />
-                  </span>
-                </button>
-              </a>
-              <NavLink exact={true} to="/contact">
-                <button className="btn btn-primary">
-                  <span className="btn-content">Get A Quote</span>
-                  <span className="icon">
-                    <i className="fa fa-envelope" aria-hidden="true" />
+                    <i className="fa fa-film" aria-hidden="true" />
                   </span>
                 </button>
               </NavLink>

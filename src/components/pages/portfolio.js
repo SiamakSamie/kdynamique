@@ -25,9 +25,15 @@ class Portfolio extends Component {
     const search = this.props.location.search;
     const params = new URLSearchParams(search);
     const index = params.get("index");
+    const videoId = params.get("video");
+
 
     if (index != null) {
       this.setState({ activeIndex: index });
+    }
+
+    if (videoId != null) {
+      this.openModal(videoId);
     }
   }
 
@@ -37,86 +43,51 @@ class Portfolio extends Component {
     });
   };
 
+  updateUrlWithVideo = videoID => {
+    this.props.history.push({
+      search: "?index="+ this.state.activeIndex +"&video=" + videoID
+    });
+  };
+
   toggleClass(index) {
     this.setState({ activeIndex: index });
     this.updateUrl(index);
   }
+
   openModal(videoID) {
+    this.updateUrlWithVideo(videoID);
     this.setState({ isOpen: true, videoID: videoID });
   }
 
   render() {
     let media = [
-      //music
+      //previsuals
       { name: "So Alive", category: "music", videoID: "Bu9gl10AkzQ" },
       { name: "See You", category: "music", videoID: "WrTdEeSEK2c" },
-      {
-        name: "Best I'll Never Have",
-        category: "music",
-        videoID: "_VRsdKhnLbY"
-      },
       { name: "Strangers", category: "music", videoID: "kQqClLNm2iY" },
-      //commercial
-      {
-        name: "Guru Lite Launch",
-        category: "commercial",
-        videoID: "Z-TMSzIPWJg"
-      },
-      {
-        name: "Guru Summer Medley",
-        category: "commercial",
-        videoID: "NXGVNPOBkRU"
-      },
-      {
-        name: "Combat D'archers Laval",
-        category: "commercial",
-        videoID: "-Azkckxeb_g"
-      },
-      {
-        name: "Combat Nerf Montreal",
-        category: "commercial",
-        videoID: "5eJ_Bph06L4"
-      },
-      //corporate
-      { name: "BDP Gala", category: "corporate", videoID: "buBhwuaQ_4A" },
-      {
-        name: "Combat D'archers Outdoor",
-        category: "corporate",
-        videoID: "AqSQg4WcvFQ"
-      },
-      { name: "Aki Pro", category: "corporate", videoID: "A0m6EfIpBJ0" },
-      {
-        name: "Ambition Boxing Gala",
-        category: "corporate",
-        videoID: "quI6cYQHPDM"
-      },
-      { name: "One Jamat", category: "corporate", videoID: "lkdzdMx0jbk" },
-      //creative
-      {
-        name: "G1nman Kill (Previsual)",
-        category: "creative",
-        videoID: "bCUn8C_Hqwo"
-      },
-      { name: "Anticipation", category: "creative", videoID: "-PKksZtYXGA" },
-      { name: "Fireworks", category: "creative", videoID: "oWzIUU-ystE" },
-      { name: "New Years", category: "creative", videoID: "p2q536qJ898" }
+      //fight
+      {name: "Guru Lite Launch", category: "commercial", videoID: "Z-TMSzIPWJg"},
+
+      //film
+      //bts
+
     ];
     let filteredMedia;
-    if (this.state.activeIndex === "music") {
+    if (this.state.activeIndex === "previsual") {
       filteredMedia = media.filter(function(media) {
-        return media.category === "music";
+        return media.category === "previsual";
       });
-    } else if (this.state.activeIndex === "commercial") {
+    } else if (this.state.activeIndex === "fight") {
       filteredMedia = media.filter(function(media) {
-        return media.category === "commercial";
+        return media.category === "fight";
       });
-    } else if (this.state.activeIndex === "corporate") {
+    } else if (this.state.activeIndex === "film") {
       filteredMedia = media.filter(function(media) {
-        return media.category === "corporate";
+        return media.category === "film";
       });
-    } else if (this.state.activeIndex === "creative") {
+    } else if (this.state.activeIndex === "bts") {
       filteredMedia = media.filter(function(media) {
-        return media.category === "creative";
+        return media.category === "bts";
       });
     } else {
       filteredMedia = media;
@@ -132,16 +103,16 @@ class Portfolio extends Component {
     return (
       <div className="portfolio">
         <ul>
-          <li className={this.state.activeIndex === "music" ? "active" : null} onClick={this.toggleClass.bind(this, "music")}>
+          <li className={this.state.activeIndex === "previsual" ? "active" : null} onClick={this.toggleClass.bind(this, "music")}>
             Music Videos
           </li>
-          <li className={this.state.activeIndex === "commercial" ? "active" : null} onClick={this.toggleClass.bind(this, "commercial")}>
+          <li className={this.state.activeIndex === "fight" ? "active" : null} onClick={this.toggleClass.bind(this, "commercial")}>
             Commercial
           </li>
-          <li className={this.state.activeIndex === "corporate" ? "active" : null} onClick={this.toggleClass.bind(this, "corporate")}>
+          <li className={this.state.activeIndex === "film" ? "active" : null} onClick={this.toggleClass.bind(this, "corporate")}>
             Corporate
           </li>
-          <li className={this.state.activeIndex === "creative" ? "active" : null} onClick={this.toggleClass.bind(this, "creative")}>
+          <li className={this.state.activeIndex === "bts" ? "active" : null} onClick={this.toggleClass.bind(this, "creative")}>
             Creative
           </li>
           <li className={this.state.activeIndex === "all" ? "active" : null} onClick={this.toggleClass.bind(this, "all")} data-filter="*">

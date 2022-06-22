@@ -6,6 +6,9 @@
   font-size: 25px;
   background: $darkGray;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   h3 {
     color: $white_50;

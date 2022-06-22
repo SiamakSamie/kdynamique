@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import Nav from "./components/nav";
 import Header from "./components/header";
 import Home from "./components/pages/home";
-import Services from "./components/pages/services";
 import About from "./components/pages/about";
 import Contact from "./components/pages/contact";
 import Portfolio from "./components/pages/portfolio";
@@ -23,13 +22,11 @@ import "./Assets/css/portfolio.min.css";
 import "./Assets/css/footer.min.css";
 import "./Assets/css/contact.min.css";
 import "./Assets/css/about.min.css";
-import "./Assets/css/services.min.css";
 
 class App extends Component {
   render() {
     let links = [
       { label: "Home", link: "/" },
-      { label: "Services", link: "/services" },
       { label: "Portfolio", link: "/portfolio" },
       { label: "About Us", link: "/about" },
       { label: "Contact Us", link: "/contact" }
@@ -60,7 +57,6 @@ class App extends Component {
             <Nav className="hidden" links={links} />
             <Header />
             <Route exact path="/" component={Home} />
-            <Route exact path="/services" component={Services} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/portfolio" component={Portfolio} />
@@ -68,7 +64,7 @@ class App extends Component {
 
             <div id="fb-root" />
 
-            <div className="fb-customerchat" attribution="setup_tool" page_id="156784661430604" />
+            <div className="fb-customerchat" attribution="setup_tool" page_id="KDYNAMIQUE" />
           </div>
         </ScrollToTop>
       </Router>

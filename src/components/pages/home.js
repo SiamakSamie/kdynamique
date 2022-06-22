@@ -1,177 +1,184 @@
-import React, { Component } from "react";
-import { Parallax } from "react-parallax";
+import React, {Component} from "react";
+import {Parallax} from "react-parallax";
 import Slider from "react-slick";
+import {NavLink} from "react-router-dom";
 
 class Home extends Component {
-  render() {
-    let logos = [
-      {
-        label: "Guru",
-        src: require("../../Assets/images/clientLogos/guru.png")
-      },
-      {
-        label: "Kinka",
-        src: require("../../Assets/images/clientLogos/kinka.png")
-      },
-      {
-        label: "Visa",
-        src: require("../../Assets/images/clientLogos/visa.png")
-      },
-      {
-        label: "Combat d'archer",
-        src: require("../../Assets/images/clientLogos/combatdarcher.png")
-      },
-      {
-        label: "Arriba burrito",
-        src: require("../../Assets/images/clientLogos/arriba.png")
-      },
-      {
-        label: "Romeo & Fils",
-        src: require("../../Assets/images/clientLogos/romeo.png")
-      },
-      {
-        label: "Starlight",
-        src: require("../../Assets/images/clientLogos/starlight.png")
-      },
-      {
-        label: "Xtreme Fitness",
-        src: require("../../Assets/images/clientLogos/xtreme.png")
-      },
-      {
-        label: "ShuttleControl",
-        src: require("../../Assets/images/clientLogos/shuttlecontrol.png")
-      },
-      {
-        label: "BeauteSelect",
-        src: require("../../Assets/images/clientLogos/beauteselect.png")
-      }
-    ];
-    let logo = logos.map((logo, i) => <img key={i} src={logo.src} alt={logo.label} />);
+	render() {
+		let logos = [
+			{
+				label: "Fantasia (selection)",
+				src: require("../../Assets/images/laurels/fantasia.jpg")
+			},
+			{
+				label: "My Rode Reel (winner)",
+				src: require("../../Assets/images/laurels/rode.png")
+			},
+			{
+				label: "48H Film Festival (winner)",
+				src: require("../../Assets/images/laurels/48h.png")
+			},
+			{
+				label: "Action On (selection)",
+				src: require("../../Assets/images/laurels/actionon.png")
+			},
+			{
+				label: "Crank (selection)",
+				src: require("../../Assets/images/laurels/crank.png")
+			},
+		];
+		let logo = logos.map((logo, i) =>
+			<div>
+				<img key={i} src={logo.src} alt={logo.label}/>
+				<p>{logo.label}</p>
+			</div>
+		);
 
-    let testimonial = [
-      {
-        name: "Julian Crasci",
-        label: "Digital Marketing Director, Guru Energy",
-        text: "Great job on the videos! The team really likes them. It made everyone in the office smile!"
-      },
-      {
-        name: "Oliver-Scott Ulysse",
-        label: "CEO, Combat D'archers",
-        text: "My clients love watching the videos produced by KDY. We have them playing at our center. It gets everyone excited to play. "
-      },
-      {
-        name: "Edward Maxedon",
-        label: "CEO, ShuttleControl",
-        text: "Our expectactions were far exceeded. Working with the KDY team was an extraordinary experience. Go KDY!"
-      },
-      {
-        name: "Jose Garcia",
-        label: "Restaurant, Arriba Burito",
-        text: "We love the videos and so do our clients. I highly recomend kdy productions to other restaurants that want to grow their business!"
-      }
-    ];
-    let testimonials = testimonial.map((testimonial, i) => (
-      <div key={i}>
-        <div className="testimonialContainer">
-          <i className="fas fa-quote-left" />
-          <h2 alt={testimonial.label}>{testimonial.text}</h2>
-          <i className="fas fa-quote-right" />
-        </div>
-        <h3>
-          {testimonial.name} <span>{testimonial.label}</span>
-        </h3>
-      </div>
-    ));
+		let film = [
+			{
+				title: "The Horror Experience",
+				url: "/portfolio",
+				date: "Digital Marketing Director, Guru Energy",
+				desc: "Cabin in the woods slasher style film with a twist. A group of teenagers are seeking the horror experience and achieve it by kidnapping someone and forcing them to play the part of the killer"
+			},
+			{
+				title: "Project Midnight",
+				url: "/portfolio",
+				desc: "A multi-person fight choreography between two gangs over a misunderstanding. A large scale fight that intertwines with each other."
+			},
+			{
+				title: "Sparring Sesh",
+				url: "/portfolio",
+				desc: "Tech mogul uses a local boxer to test his AI fight simulator. With each fight, the boxer gets better and the AI gets smarter. "
+			},
+			{
+				title: "Sword Hero",
+				url: "/portfolio",
+				desc: "One man against a small army of sword wielders."
+			},
+			{
+				title: "Escape",
+				url: "/portfolio",
+				desc: "1-take action scene, with no hidden cuts. A group of unarmed prisoners attempt to escape from a military facility to avoid being used as medical test subjects."
+			},
+			{
+				title: "Perdition",
+				url: "/portfolio",
+				desc: "A man relives the same moment of being dragged into the woods and murdered. Can he get to the bottom of why he's stuck in this loop?"
+			}
+		];
+		let films = film.map((film, i) => (
+			<div key={i}>
+				<h2>
+					<span>{film.title}</span>
+				</h2>
+				<div className="filmContainer">
+					<i className="fas fa-quote-left"/>
+					<h2>{film.desc}</h2>
+					<i className="fas fa-quote-right"/>
+				</div>
+				<NavLink exact={true} to="/portfolio">
+					<h3><span>Watch Now <i className="fas fa-arrow-right"/></span></h3>
+				</NavLink>
+			</div>
+		));
 
-    var sliderSettings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 4000
-    };
+		var sliderSettings = {
+			dots: true,
+			infinite: true,
+			speed: 500,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 8000
+		};
 
-    return (
-      <div className="container-fluid">
-        <div className="row homeIntroLine">
-          <h1>
-            Lights. Camera. <span>Action.</span>
-          </h1>
-        </div>
-        <div className="row videoBackground">
-          <div className="videoWrapper">
-            <div className="resposiveVideoContainer ">
-              <iframe
-                title="kdy"
-                src="https://player.vimeo.com/video/280309304?title=0&byline=0&portrait=0"
-                frameBorder="0"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                allowFullScreen={true}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="row homeStatement">
-          <h2>Montreal-Toronto Production Team</h2>
-          <h3>
-            Welcome to kdy productions. We're here to put your vision on video. We've got an experienced team that take pride in what we do. From
-            script writing to the final touches, we put care in every step of the production process.
-          </h3>
-          <hr />
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-sm-4">
-                <div className=" box">
-                  <i className="fas fa-pencil-alt fa-3x" />
-                  <h4>Creativity</h4>
-                  <p>
-                    We're always thinking of new ways to spice up the content we create. We use new cinematic techniques and creative concepts to
-                    capture the viewer's attention.
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-4">
-                <div className=" box">
-                  <i className="fas fa-hands-helping fa-3x" />
-                  <h4>Teamwork</h4>
-                  <p>
-                    Producing quality content needs a team with unique skills. It also depends on YOU! We'll work together closely to make your vision
-                    come to life!
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-4">
-                <div className=" box">
-                  <i className="fas fa-business-time fa-3x" />
-                  <h4>Professionalism</h4>
-                  <p>
-                    We ensure that every process is held to the highest quality. We want the final product to be amazing but we also want the process
-                    to get there to be a great experience.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row clientList">
-          <h1>Our Trusted Clients</h1>
-          <div className="clientListLogos">{logo}</div>
-        </div>
-        <div className="row testimonials">
-          <Parallax blur={4} bgImage={require("../../Assets/images/headerPhotos/home.JPG")} bgImageAlt="testimonial" strength={600}>
-            <h1>Testimonials</h1>
-            <Slider {...sliderSettings}>{testimonials}</Slider>
-          </Parallax>
-        </div>
-        <div className="row callToAction">
-          <img src={require("../../Assets/images/logoCallToAction.png")} alt="KDY" className="responsive" />
-        </div>
-      </div>
-    );
-  }
+		return (
+			<div className="container-fluid">
+				<div className="row homeIntroLine">
+					<h1>
+						EXPECT SOME ACTION
+					</h1>
+				</div>
+				<div className="row videoBackground">
+					<div className="videoWrapper">
+						<div className="resposiveVideoContainer ">
+							<iframe
+								title="kdy"
+								src="https://player.vimeo.com/video/280309304?title=0&byline=0&portrait=0"
+								frameBorder="0"
+								allowFullScreen={true}
+							/>
+						</div>
+					</div>
+				</div>
+				<div className="row homeStatement">
+					<h2>Action Design and Performance </h2>
+					<h3>
+						Kdynamique is a team of action-oriented humans that create content from conception to final
+						touches.
+					</h3>
+					<hr/>
+					<div className="container-fluid">
+						<div className="row">
+							<div className="col-sm-6">
+								<div className=" box">
+									<i className="fas fa-video fa-3x"/>
+									<h4>Previsuals</h4>
+									<div className="videoWrapper">
+										<div className="resposiveVideoContainer ">
+											<iframe
+												title="kdy"
+												src="https://player.vimeo.com/video/280309304?title=0&byline=0&portrait=0"
+												frameBorder="0"
+												allowFullScreen={true}
+											/>
+										</div>
+									</div>
+									<NavLink exact={true} to="/portfolio">
+										<p>See more previsuals <i className="fas fa-arrow-right"/></p>
+									</NavLink>
+								</div>
+							</div>
+							<div className="col-sm-6">
+								<div className=" box">
+									<i className="fas fa-film fa-3x"/>
+									<h4>Productions</h4>
+									<div className="videoWrapper">
+										<div className="resposiveVideoContainer ">
+											<iframe
+												title="kdy"
+												src="https://player.vimeo.com/video/280309304?title=0&byline=0&portrait=0"
+												frameBorder="0"
+												allowFullScreen={true}
+											/>
+										</div>
+									</div>
+									<NavLink exact={true} to="/portfolio?index=corporate">
+										<p>See more previsuals <i className="fas fa-arrow-right"/></p>
+									</NavLink>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="row awardList">
+					<h1>Awards and Recognitions</h1>
+					<div className="awardListLogos">{logo}</div>
+				</div>
+				<div className="row films">
+					<Parallax blur={4} bgImage={require("../../Assets/images/headerPhotos/home.JPG")} bgImageAlt="film"
+					          strength={600}>
+						<h1>Our Favorite Creations</h1>
+						<Slider {...sliderSettings}>{films}</Slider>
+					</Parallax>
+				</div>
+				<div className="row callToAction">
+					<img src={require("../../Assets/images/kdyTextBlack.png")} alt="KDY" className="responsive"/>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Home;

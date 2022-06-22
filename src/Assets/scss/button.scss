@@ -9,26 +9,29 @@
   position: relative;
   text-decoration: none;
   line-height: 1;
-  margin: 0px 4px 40px 4px;
+  margin: 0 4px 25px 4px;
   padding: 8px;
   font-size: 14px;
   font-weight: 700;
-  width: 210px;
+  width: 320px;
+  cursor: pointer;
 
   @media screen and (max-width: $break-small) {
-    margin: 0px 2px 5px 2px;
+    width: 235px;
+    margin: 0 2px 5px 2px;
     padding: 4px;
     font-size: 12px;
-    width: 150px;
   }
   @media screen and (min-width: $break-large) {
-    margin: 0px 6px 50px 6px;
+    width: 350px;
+    margin: 0 6px 50px 6px;
     padding: 12px;
     font-size: 16px;
-    width: 270px;
   }
 
   .btn-content {
+    cursor: pointer;
+    color: $white;
     font-size: 1em;
     line-height: 1.2;
     padding: 0 26px;

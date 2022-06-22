@@ -5,11 +5,11 @@ class Footer extends Component {
     return (
       <div className="footer">
         <h3>
-          kdypro.com <i className="far fa-copyright" /> 2019
+          kdynamique.com <i className="far fa-copyright" /> 2022
         </h3>
         <ul className="social-icons">
           <li>
-            <a href="https://www.facebook.com/kdyprod" className="social-icon">
+            <a href="https://www.facebook.com/kdynamiqued" className="social-icon">
               <i className="fab fa-facebook-f" />
             </a>
           </li>

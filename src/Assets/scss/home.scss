@@ -1,5 +1,11 @@
 @import "_config.scss";
 
+@font-face {
+  font-family: "Capsmall";
+  src: local("Capsmall"),
+  url("../fonts/Capsmall.ttf") format("truetype");
+}
+
 .homeIntroLine {
   background: $white;
   text-align: center;
@@ -10,8 +16,16 @@
   @media screen and (min-width: $break-large) {
     padding: 38px;
   }
+
   h1 {
-    color: $darkGray;
+    font-family: Capsmall, monospace;
+    background: #000;
+    color: #fff;
+    display: inline-flex;
+    padding: 8px 25px;
+    font-size: 35px;
+    letter-spacing: 4px;
+
     span {
       color: $kdy-red;
       font-weight: 600;
@@ -19,31 +33,34 @@
   }
 }
 
-.videoBackground {
+.videoBackground, {
   background: linear-gradient(180deg, $white 25%, $darkGray 25%);
+}
 
-  .videoWrapper {
-    margin: 0 auto;
-    padding: 0 30px;
-    max-width: 800px;
-    .resposiveVideoContainer {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-      iframe,
-      object,
-      embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+.videoWrapper {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 800px;
+
+  .resposiveVideoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
+
 
 .homeStatement {
   background: $darkGray;
@@ -51,28 +68,42 @@
   margin-top: -2px; //1px gap shows between rows sometimes
   text-align: center;
   color: $white;
+
   h2 {
     padding-bottom: 20px;
   }
+
   h3 {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     padding-bottom: 20px;
     line-height: 25px;
   }
+
   hr {
     width: 80%;
     max-width: 1000px;
     border-color: $white_50;
   }
+
   .container-fluid {
     max-width: 1200px;
     padding: 20px 0;
+
     .box {
       margin-bottom: 25px;
-      padding: 30px;
+      padding-top: 25px;
+      padding-bottom: 25px;
       border-radius: 5px;
       background: $gray;
+
+      p{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        color:$lightBlue
+      }
+
       .fas {
         color: $lightBlue;
       }
@@ -80,16 +111,27 @@
   }
 }
 
-.clientList {
+.awardList {
   text-align: center;
   background: $white;
   padding: 40px 0;
+
   h1 {
     padding-bottom: 35px;
   }
-  .clientListLogos {
+
+  .awardListLogos {
     max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    p{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     img {
       height: 120px;
       width: 120px;
@@ -100,6 +142,7 @@
         width: 90px;
         margin: 0 10px;
       }
+
       &:hover {
         -webkit-filter: opacity(50%);
         filter: opacity(50%);
@@ -109,14 +152,21 @@
   }
 }
 
-.testimonials {
+.films {
   text-align: center;
+
   h1 {
+    background-color: $white_25;
     border-radius: 0 0 10px 10px;
     color: $white;
     padding: 35px 25px 25px 25px;
     display: inline-block;
   }
+
+  h2 {
+    padding-top: 30px;
+  }
+
   h3 {
     padding: 0 0 25px 0;
     color: $white;
@@ -128,6 +178,7 @@
       font-size: 12px;
     }
   }
+
   span {
     font-weight: 600;
     display: block;
@@ -144,24 +195,27 @@
     margin-right: 40px;
   }
 
-  .testimonialContainer {
+  .filmContainer {
     width: 65%;
     margin: auto;
-    padding: 30px 0;
+    padding: 20px 0;
     color: $white;
     @media screen and (max-width: $break-small) {
       padding: 40px 0;
     }
+
     .fa-quote-left {
       color: $white_50;
       float: left;
       margin: -5px 0px;
     }
+
     .fa-quote-right {
       color: $white_50;
       float: right;
       margin: -5px 0px;
     }
+
     h2 {
       color: $white;
       font-style: italic;
@@ -175,6 +229,7 @@
       }
     }
   }
+
   .react-parallax {
     .react-parallax-content {
       background: $parallax-overlay;

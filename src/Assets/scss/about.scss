@@ -9,6 +9,10 @@
     padding: 20px;
   }
 
+  h3 {
+    line-height: 26px;
+  }
+
   p {
     max-width: 700px;
     margin: auto;
@@ -29,24 +33,11 @@
     text-align: center;
     font-size: 25px;
   }
-  .aboutUsBody {
-    margin: 0;
-    padding: 15px;
-    text-align: center;
-    line-height: 24px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-25%);
+  .aboutUsVideo {
+    padding-bottom: 15px;
+    padding-top: 65px;
   }
-  .aboutUsModalButton {
-    padding: 15px;
-    margin: 0 auto;
-    bottom: 20px;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
+
   .aboutUsPhoto {
     width: 80px;
     border-radius: 50px;
@@ -96,6 +87,7 @@ figure.aboutUsMemberContainer figcaption {
   background: #ffffff;
 }
 figure.aboutUsMemberContainer figcaption h2,
+figure.aboutUsMemberContainer figcaption h3,
 figure.aboutUsMemberContainer figcaption p {
   margin: 0;
   color: #000000;
@@ -116,6 +108,14 @@ figure.aboutUsMemberContainer figcaption h2 {
     font-size: 1em;
   }
 }
+
+figure.aboutUsMemberContainer figcaption h3 {
+  font-size: 1em;
+  top: 75%;
+  right: 0;
+  font-weight: 800;
+}
+
 figure.aboutUsMemberContainer figcaption h2 span {
   font-weight: 800;
 }
