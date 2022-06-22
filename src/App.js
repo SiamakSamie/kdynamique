@@ -64,7 +64,7 @@ class App extends Component {
 
             <div id="fb-root" />
 
-            <div className="fb-customerchat" attribution="setup_tool" page_id="KDYNAMIQUE" />
+            <div className="fb-customerchat" attribution="biz_inbox" page_id="1454805924815189" />
           </div>
         </ScrollToTop>
       </Router>
