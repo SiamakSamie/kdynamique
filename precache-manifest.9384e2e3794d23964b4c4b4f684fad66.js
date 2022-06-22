@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/rode.33b66e6f.png"
   },
   {
-    "revision": "64d4be0536a9e511ec66",
+    "revision": "f4ad48899fa1ca813773",
     "url": "/static/css/main.87039aab.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/static/media/fantasia.d594953b.jpg"
   },
   {
-    "revision": "64d4be0536a9e511ec66",
-    "url": "/static/js/main.3ad860f4.chunk.js"
+    "revision": "f4ad48899fa1ca813773",
+    "url": "/static/js/main.3210d408.chunk.js"
   },
   {
     "revision": "27aa43f0bb8734b24e4dca90b786de3f",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/static/media/Capsmall.6fd55e9e.ttf"
   },
   {
-    "revision": "9faab1555d39f93880903c973b888d9d",
+    "revision": "01cb837c8740f5ba8e5e3880e8484446",
     "url": "/index.html"
   }
 ];
