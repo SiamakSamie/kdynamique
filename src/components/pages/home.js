@@ -105,7 +105,7 @@ class Home extends Component {
 						<div className="resposiveVideoContainer ">
 							<iframe
 								title="kdy"
-								src="https://player.vimeo.com/video/280309304?title=0&byline=0&portrait=0"
+								src="https://www.youtube.com/embed/517VoWZj43Y"
 								frameBorder="0"
 								allowFullScreen={true}
 							/>
@@ -129,7 +129,7 @@ class Home extends Component {
 										<div className="resposiveVideoContainer ">
 											<iframe
 												title="kdy"
-												src="https://player.vimeo.com/video/280309304?title=0&byline=0&portrait=0"
+												src="https://player.vimeo.com/video/724134433?h=50442502ff"
 												frameBorder="0"
 												allowFullScreen={true}
 											/>
@@ -148,7 +148,7 @@ class Home extends Component {
 										<div className="resposiveVideoContainer ">
 											<iframe
 												title="kdy"
-												src="https://player.vimeo.com/video/280309304?title=0&byline=0&portrait=0"
+												src="https://player.vimeo.com/video/723521065?h=77f614d426"
 												frameBorder="0"
 												allowFullScreen={true}
 											/>

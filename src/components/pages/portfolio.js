@@ -61,14 +61,37 @@ class Portfolio extends Component {
 
   render() {
     let media = [
-      //previsuals
-      { name: "So Alive", category: "music", videoID: "Bu9gl10AkzQ" },
-      { name: "See You", category: "music", videoID: "WrTdEeSEK2c" },
-      { name: "Strangers", category: "music", videoID: "kQqClLNm2iY" },
-      //fight
-      {name: "Guru Lite Launch", category: "commercial", videoID: "Z-TMSzIPWJg"},
+      //Previsuals
+      { name: "The Kill", category: "previsual", videoID: "sVb_4PvPrWI" },
+      { name: "Black vs. Red", category: "previsual", videoID: "GPgrm3S1pRM" },
+      { name: "The Psycho", category: "previsual", videoID: "8F8oL2VtnfE" },
+      { name: "The Bully", category: "previsual", videoID: "cri-VZSJEDE" },
+      { name: "G1man Kill 2", category: "previsual", videoID: "EuyetBHqCnc" },
+      { name: "The Assassin", category: "previsual", videoID: "zvRUzErltPM" },
+      { name: "Sword King", category: "previsual", videoID: "XVrf8inIavA" },
+      { name: "Quick Time Event", category: "previsual", videoID: "WFCh_h3-Zo8" },
+      { name: "Blinded by Sound", category: "previsual", videoID: "YNKTfvyf4zY" },
+      { name: "ZDY: Night Zombies", category: "previsual", videoID: "PmLIT-FSDyI" },
+      { name: "The Heist", category: "previsual", videoID: "ixHJBBPciUg" },
 
-      //film
+      //Films
+      { name: "Sparring Session", category: "film", videoID: "m5xgRBn9R0k" },
+      { name: "Sword Hero", category: "film", videoID: "AejEoq9DBug" },
+      { name: "Escape", category: "film", videoID: "0_kwysdCmrw" },
+      { name: "Tom Wick", category: "film", videoID: "aRRTKnFBZI4" },
+      { name: "The Horror experience", category: "film", videoID: "JAtb627mfU4" },
+      { name: "Briefcase", category: "film", videoID: "j9eGjivQiHI" },
+      { name: "Perdition", category: "film", videoID: "NUtLptl7RB0" },
+      { name: "Project Midnight", category: "film", videoID: "avIr-QQk8JE" },
+      { name: "Shut Up!", category: "film", videoID: "JYmzTlUM-Zk" },
+
+      //Fight Scenes
+      { name: "Elevator Gun Fight", category: "fight", videoID: "pTdsnvGxsl0" },
+      { name: "Street Fight", category: "fight", videoID: "M-crV2gA7QE" },
+      { name: "Parking Lot Fight", category: "fight", videoID: "NeF0RlWwVz0" },
+      { name: "One-Take Knife Fight", category: "fight", videoID: "aLOVtb-_nZY" },
+      { name: "Slow Motion: Knife Concept", category: "fight", videoID: "HRSMzjzPaSk" },
+
       //bts
 
     ];
@@ -103,17 +126,17 @@ class Portfolio extends Component {
     return (
       <div className="portfolio">
         <ul>
-          <li className={this.state.activeIndex === "previsual" ? "active" : null} onClick={this.toggleClass.bind(this, "music")}>
-            Music Videos
+          <li className={this.state.activeIndex === "previsual" ? "active" : null} onClick={this.toggleClass.bind(this, "previsual")}>
+            Previsuals
           </li>
-          <li className={this.state.activeIndex === "fight" ? "active" : null} onClick={this.toggleClass.bind(this, "commercial")}>
-            Commercial
+          <li className={this.state.activeIndex === "fight" ? "active" : null} onClick={this.toggleClass.bind(this, "fight")}>
+            Fight Scenes
           </li>
-          <li className={this.state.activeIndex === "film" ? "active" : null} onClick={this.toggleClass.bind(this, "corporate")}>
-            Corporate
+          <li className={this.state.activeIndex === "film" ? "active" : null} onClick={this.toggleClass.bind(this, "film")}>
+            Films
           </li>
-          <li className={this.state.activeIndex === "bts" ? "active" : null} onClick={this.toggleClass.bind(this, "creative")}>
-            Creative
+          <li className={this.state.activeIndex === "bts" ? "active" : null} onClick={this.toggleClass.bind(this, "bts")}>
+            BTS
           </li>
           <li className={this.state.activeIndex === "all" ? "active" : null} onClick={this.toggleClass.bind(this, "all")} data-filter="*">
             All
