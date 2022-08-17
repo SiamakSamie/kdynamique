@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/fantasia.d594953b.jpg"
   },
   {
-    "revision": "a468d54f501586ed0c85",
+    "revision": "984979b5f3ea546ce1bf",
     "url": "/static/css/main.87039aab.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/static/media/kdyLogoWhite.bf12f79f.png"
   },
   {
-    "revision": "a468d54f501586ed0c85",
-    "url": "/static/js/main.3315a176.chunk.js"
+    "revision": "984979b5f3ea546ce1bf",
+    "url": "/static/js/main.109d1628.chunk.js"
   },
   {
     "revision": "33b66e6f86b9f5248fd180b54e4e4967",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/static/media/Capsmall.6fd55e9e.ttf"
   },
   {
-    "revision": "f63860e4e2da33d43f4f7a81ddb24621",
+    "revision": "4b429d772d60c1f70354a0bb1f88463c",
     "url": "/index.html"
   }
 ];
