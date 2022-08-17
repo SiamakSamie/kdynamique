@@ -34,21 +34,21 @@ class About extends Component {
 			{
 				firstName: "Malik",
 				lastName: "Bouabid",
-				description: "Co-founder of KDY, performer, and action filmmaker.",
+				description: "Performer, actor, content creator, action filmmaker.",
 				url: "https://www.youtube.com/embed/mbhw9uRbQ-Q",
 				image: require("../../Assets/images/teamPhotos/malik.png")
 			},
 			{
 				firstName: "Siamak",
 				lastName: "Samie",
-				description: "Co-founder of KDY, performer, choreographer, producer.",
+				description: "Performer, choreographer, actor, content creator.",
 				url: "https://player.vimeo.com/video/700139610?h=caaced28ac",
 				image: require("../../Assets/images/teamPhotos/siamak.jpg")
 			},
 			{
 				firstName: "Andrew",
 				lastName: "Hanichkovsky",
-				description: "Co-founder of KDY, performer, producer.",
+				description: "Performer, actor, content creator.",
 				url: "https://www.youtube.com/embed/euJbjsZJwkY",
 				image: require("../../Assets/images/teamPhotos/frank.jpg")
 			},
@@ -84,7 +84,7 @@ class About extends Component {
 				</h4>
 				<p>
 					Friends since college who started a martial arts club and then began making action films. Throughout
-					the years we got better and had the privilege to work with talented individuals in various fields.
+					the years we got better and had the privilege to work with talented people in various fields.
 				</p>
 				{member}
 				<Modal visible={this.state.visible} width="700" effect="fadeInUp"
@@ -96,12 +96,14 @@ class About extends Component {
 						<img className="aboutUsPhoto" src={this.state.modalPhoto} alt="KDY"/>
 						<div className="videoWrapper aboutUsVideo">
 							<div className="resposiveVideoContainer">
-								<iframe
-									title="kdy"
-									src={this.state.demoReelUrl}
-									frameBorder="0"
-									allowFullScreen={true}
-								/>
+								{ this.state.visible &&
+									<iframe
+										title="kdy"
+										src={this.state.demoReelUrl}
+										frameBorder="0"
+										allowFullScreen={true}
+									/>
+								}
 							</div>
 						</div>
 						<button className="btn btn-primary" onClick={() => this.closeModal()}>

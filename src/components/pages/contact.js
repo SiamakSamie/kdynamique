@@ -100,7 +100,8 @@ class Contact extends Component {
                     <div className="buffer">
                       <i className="fas fa-user"/>
                       <p className="addon-text">Name</p>
-                    </div></span>
+                    </div>
+                  </span>
 									<input
 										name="name"
 										placeholder="Name"
@@ -117,12 +118,12 @@ class Contact extends Component {
 						<div className="form-group">
 							<div className="col-md-12 inputGroupContainer">
 								<div className="input-group">
-                  <span className="input-group-addon">
-                    <div className="buffer">
-                      <i className="fas fa-at"/>
-                      <p className="addon-text">E-mail</p>
-                    </div>
-                  </span>
+	                  <span className="input-group-addon">
+	                    <div className="buffer">
+	                      <i className="fas fa-at"/>
+	                      <p className="addon-text">E-mail</p>
+	                    </div>
+	                  </span>
 									<input
 										name="email"
 										placeholder="E-Mail Address"
