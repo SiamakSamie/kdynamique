@@ -155,7 +155,7 @@ class Home extends Component {
 										</div>
 									</div>
 									<NavLink exact={true} to="/portfolio?index=corporate">
-										<p>See more previsuals <i className="fas fa-arrow-right"/></p>
+										<p>See more films <i className="fas fa-arrow-right"/></p>
 									</NavLink>
 								</div>
 							</div>
