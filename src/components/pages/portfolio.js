@@ -170,18 +170,15 @@ class Portfolio extends Component {
 			filteredMedia = media.filter(function (media) {
 				return media.category === "vlog";
 			});
-		}
-		else if (this.state.activeIndex === "misc") {
+		} else if (this.state.activeIndex === "misc") {
 			filteredMedia = media.filter(function (media) {
 				return media.category === "misc";
 			});
-		}
-		else if (this.state.activeIndex === "ads") {
+		} else if (this.state.activeIndex === "ads") {
 			filteredMedia = media.filter(function (media) {
 				return media.category === "ads";
 			});
-		}
-		else {
+		} else {
 			filteredMedia = media;
 		}
 

@@ -96,12 +96,12 @@ class Contact extends Component {
 						<div className="form-group">
 							<div className="col-md-12 inputGroupContainer">
 								<div className="input-group">
-                  <span className="input-group-addon">
-                    <div className="buffer">
-                      <i className="fas fa-user"/>
-                      <p className="addon-text">Name</p>
-                    </div>
-                  </span>
+									<div className="input-group-addon">
+										<div className="buffer">
+											<i className="fas fa-user"/>
+											<p className="addon-text">Name</p>
+										</div>
+									</div>
 									<input
 										name="name"
 										placeholder="Name"
@@ -118,12 +118,12 @@ class Contact extends Component {
 						<div className="form-group">
 							<div className="col-md-12 inputGroupContainer">
 								<div className="input-group">
-	                  <span className="input-group-addon">
-	                    <div className="buffer">
-	                      <i className="fas fa-at"/>
-	                      <p className="addon-text">E-mail</p>
-	                    </div>
-	                  </span>
+									<div className="input-group-addon">
+										<div className="buffer">
+											<i className="fas fa-at"/>
+											<p className="addon-text">E-mail</p>
+										</div>
+									</div>
 									<input
 										name="email"
 										placeholder="E-Mail Address"
@@ -140,12 +140,12 @@ class Contact extends Component {
 						<div className="form-group">
 							<div className="col-md-12 inputGroupContainer">
 								<div className="input-group">
-                  <span className="input-group-addon">
-                    <div className="buffer">
-                      <i className="fas fa-phone"/>
-                      <p className="addon-text">Phone</p>
-                    </div>
-                  </span>
+									<div className="input-group-addon">
+										<div className="buffer">
+											<i className="fas fa-phone"/>
+											<p className="addon-text">Phone</p>
+										</div>
+									</div>
 									<input
 										name="phone"
 										placeholder="(555) 555-5555"
@@ -161,12 +161,12 @@ class Contact extends Component {
 						<div className="form-group">
 							<div className="col-md-12 inputGroupContainer">
 								<div className="input-group">
-                  <span className="input-group-addon">
-                    <div className="buffer">
-                      <i className="fas fa-pencil-alt"/>
-                      <p className="addon-text">Message</p>
-                    </div>
-                  </span>
+									<div className="input-group-addon">
+										<div className="buffer">
+											<i className="fas fa-pencil-alt"/>
+											<p className="addon-text">Message</p>
+										</div>
+									</div>
 									<textarea
 										className="form-control message"
 										name="message"
@@ -183,9 +183,9 @@ class Contact extends Component {
 							<div className="col-md-12">
 								<button className="btn btn-primary">
 									<span className="btn-content">send</span>
-									<span className="icon">
-                    <i className="fas fa-paper-plane"/>
-                  </span>
+									<div className="icon">
+										<i className="fas fa-paper-plane"/>
+									</div>
 								</button>
 							</div>
 						</div>

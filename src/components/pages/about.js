@@ -89,20 +89,20 @@ class About extends Component {
 				{member}
 				<Modal visible={this.state.visible} width="700" effect="fadeInUp"
 				       onClickAway={() => this.closeModal()}>
-					<div style={{height:"100%"}}>
+					<div style={{height: "100%"}}>
 						<h2 className="aboutUsHeader">
 							{this.state.modalFirstName} {this.state.modalLastName}
 						</h2>
 						<img className="aboutUsPhoto" src={this.state.modalPhoto} alt="KDY"/>
 						<div className="videoWrapper aboutUsVideo">
 							<div className="resposiveVideoContainer">
-								{ this.state.visible &&
-									<iframe
-										title="kdy"
-										src={this.state.demoReelUrl}
-										frameBorder="0"
-										allowFullScreen={true}
-									/>
+								{this.state.visible &&
+								<iframe
+									title="kdy"
+									src={this.state.demoReelUrl}
+									frameBorder="0"
+									allowFullScreen={true}
+								/>
 								}
 							</div>
 						</div>
