@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/static/media/Capsmall.6fd55e9e.ttf"
   },
   {
-    "revision": "e537545a0aa3ec0abc932474f479ae25",
+    "revision": "160315b309271b0bbf2e862d09e50841",
     "url": "/index.html"
   }
 ];
